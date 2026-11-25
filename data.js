@@ -7,7 +7,8 @@ const OUTFITS = [
     "prompt": "navy single-breasted blazer with subtle brass buttons, pale blue oxford button-down shirt with open collar, cream pleated chinos, dark brown penny loafers, dark brown leather belt, simple silver wristwatch with brown leather strap",
     "id": "MW-031",
     "style": "올드머니",
-    "image": "images/look-31.jpg"
+    "image": "images/look-31.jpg",
+    "category": "클래식·올드머니"
   },
   {
     "name": "캐시미어 위켄드",
@@ -17,7 +18,8 @@ const OUTFITS = [
     "prompt": "cream cable-knit cashmere crewneck sweater over a white oxford shirt with visible collar, taupe pleated wool trousers, chocolate brown suede loafers, dark brown leather belt, simple gold wristwatch with brown leather strap",
     "id": "MW-032",
     "style": "올드머니",
-    "image": "images/look-32.jpg"
+    "image": "images/look-32.jpg",
+    "category": "클래식·올드머니"
   },
   {
     "name": "리비에라 리넨",
@@ -27,7 +29,8 @@ const OUTFITS = [
     "prompt": "sand beige long-sleeve linen shirt with open collar and rolled cuffs, ivory high-waisted pleated linen trousers, medium brown suede loafers worn without socks, brown woven leather belt, tortoiseshell sunglasses",
     "id": "MW-033",
     "style": "올드머니",
-    "image": "images/look-33.jpg"
+    "image": "images/look-33.jpg",
+    "category": "클래식·올드머니"
   },
   {
     "name": "컨트리 에스테이트",
@@ -37,7 +40,8 @@ const OUTFITS = [
     "prompt": "olive waxed cotton field jacket with dark brown corduroy collar, burgundy fine-knit wool V-neck sweater over an ivory small-check button-down shirt, tan straight-leg corduroy trousers, dark brown leather brogue boots, brown leather belt",
     "id": "MW-034",
     "style": "올드머니",
-    "image": "images/look-34.jpg"
+    "image": "images/look-34.jpg",
+    "category": "클래식·올드머니"
   },
   {
     "id": "MW-013",
@@ -47,7 +51,8 @@ const OUTFITS = [
     "prompt": "gray and burgundy argyle sweater vest, pale blue button-up shirt, burgundy striped necktie, charcoal pleated trousers, black penny loafers, rectangular black glasses, brown leather satchel",
     "desc": "아가일 베스트·스트라이프 타이·사각 안경",
     "keywords": "아가일 조끼 베스트 셔츠 타이 안경 사첼 geek chic preppy",
-    "image": "images/look-13.jpg"
+    "image": "images/look-13.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-014",
@@ -57,7 +62,8 @@ const OUTFITS = [
     "prompt": "fitted chocolate brown cardigan, ivory oxford shirt, navy narrow necktie, gray tailored bermuda shorts, cream crew socks, dark brown loafers, thin oval metal glasses",
     "desc": "슬림 카디건·버뮤다·크루 삭스",
     "keywords": "갈색 카디건 반바지 버뮤다 안경 geek chic preppy",
-    "image": "images/look-14.jpg"
+    "image": "images/look-14.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-015",
@@ -67,7 +73,8 @@ const OUTFITS = [
     "prompt": "brown herringbone tweed blazer, moss green knit polo, beige corduroy trousers, dark brown brogues, tortoiseshell glasses, brown leather belt",
     "desc": "트위드와 모스그린 니트 폴로",
     "keywords": "트위드 재킷 골덴 코듀로이 안경 geek chic preppy",
-    "image": "images/look-15.jpg"
+    "image": "images/look-15.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-016",
@@ -77,7 +84,8 @@ const OUTFITS = [
     "prompt": "slate blue racing jacket with ivory panels, white fitted t-shirt, faded blue baggy jeans, chunky silver sneakers, narrow wraparound sunglasses, black shoulder bag",
     "desc": "레이싱 패널 재킷·배기 데님",
     "keywords": "레이싱 블루 배기 청바지 선글라스 y2k streetwear",
-    "image": "images/look-16.jpg"
+    "image": "images/look-16.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-017",
@@ -87,7 +95,8 @@ const OUTFITS = [
     "prompt": "oversized navy mesh jersey with cream piping, white short-sleeve t-shirt, charcoal cargo shorts, white crew socks, gray skate shoes, navy baseball cap, silver chain necklace",
     "desc": "메시 저지·카고 쇼츠·스케이트 슈즈",
     "keywords": "농구 저지 메시 반팔 카고 반바지 y2k streetwear",
-    "image": "images/look-17.jpg"
+    "image": "images/look-17.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-018",
@@ -97,7 +106,8 @@ const OUTFITS = [
     "prompt": "charcoal track jacket with silver curved stripes, pale gray tank top, steel gray parachute pants, black and silver running shoes, gray beanie, black nylon crossbody bag",
     "desc": "곡선 트랙 재킷·파라슈트 팬츠",
     "keywords": "은색 트랙 트레이닝 나일론 비니 y2k streetwear",
-    "image": "images/look-18.jpg"
+    "image": "images/look-18.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-019",
@@ -107,7 +117,8 @@ const OUTFITS = [
     "prompt": "deep burgundy velour zip-up hoodie with rhinestone crest, matching burgundy velour track pants, white ribbed tank top, white leather sneakers, thick silver chain necklace, silver watch, tinted rectangular sunglasses",
     "desc": "버건디 벨루어 셋업·라인스톤",
     "keywords": "벨루어 벨벳 버건디 반짝 주얼리 mcbling y2k",
-    "image": "images/look-19.jpg"
+    "image": "images/look-19.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-020",
@@ -117,7 +128,8 @@ const OUTFITS = [
     "prompt": "white ribbed tank top, faded blue bootcut jeans with rhinestone pocket embroidery, white leather belt with large silver buckle, white high-top sneakers, silver cross necklace, black rhinestone trucker cap",
     "desc": "라인스톤 부츠컷·큰 버클·트러커 캡",
     "keywords": "데님 부츠컷 라인스톤 십자가 벨트 mcbling y2k",
-    "image": "images/look-20.jpg"
+    "image": "images/look-20.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-021",
@@ -127,7 +139,8 @@ const OUTFITS = [
     "prompt": "champagne satin bomber jacket, black fitted t-shirt with small rhinestone star, dark indigo bootcut jeans, black leather belt with ornate silver buckle, black leather sneakers, silver chain bracelet, brown tinted aviator sunglasses",
     "desc": "샴페인 새틴 봄버·장식 버클",
     "keywords": "새틴 광택 봄버 인디고 별 주얼리 mcbling y2k",
-    "image": "images/look-21.jpg"
+    "image": "images/look-21.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-022",
@@ -137,7 +150,8 @@ const OUTFITS = [
     "prompt": "worn black leather biker jacket, faded gray graphic t-shirt with abstract print, black skinny jeans, scuffed black chelsea boots, narrow black scarf, black studded belt",
     "desc": "낡은 바이커 재킷·스키니·좁은 스카프",
     "keywords": "가죽 라이더 스키니 스카프 indie sleaze",
-    "image": "images/look-22.jpg"
+    "image": "images/look-22.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-023",
@@ -147,7 +161,8 @@ const OUTFITS = [
     "prompt": "distressed black and cream striped sweater, washed gray slim jeans with ripped knees, worn black canvas sneakers, black narrow brim felt hat, long silver pendant necklace",
     "desc": "해진 줄무늬 니트·워시드 슬림 데님",
     "keywords": "줄무늬 스트라이프 찢청 페도라 indie sleaze",
-    "image": "images/look-23.jpg"
+    "image": "images/look-23.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-024",
@@ -157,7 +172,8 @@ const OUTFITS = [
     "prompt": "slim charcoal blazer, crumpled white shirt, loosely knotted narrow black tie, faded black skinny jeans, pointed black ankle boots, black leather cuff bracelet",
     "desc": "구겨진 셔츠·느슨한 타이·슬림 블레이저",
     "keywords": "블레이저 셔츠 타이 스키니 indie sleaze",
-    "image": "images/look-24.jpg"
+    "image": "images/look-24.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-025",
@@ -167,7 +183,8 @@ const OUTFITS = [
     "prompt": "navy school-style blazer with ivory piping, white shirt, loosened burgundy tie, burgundy and navy tartan slim trousers, black combat boots, silver wallet chain, silver safety pin brooch",
     "desc": "파이핑 블레이저·타탄 팬츠·워커",
     "keywords": "체크 타탄 블레이저 워커 안전핀 punk preppy",
-    "image": "images/look-25.jpg"
+    "image": "images/look-25.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-026",
@@ -177,7 +194,8 @@ const OUTFITS = [
     "prompt": "distressed charcoal and plum argyle sweater, white button-up shirt with uneven hem, black narrow tie, black tailored shorts, black knee-high socks, chunky black loafers, silver wallet chain, black studded wristband",
     "desc": "찢어진 아가일·테일러드 쇼츠·체인",
     "keywords": "아가일 니트 반바지 니삭스 체인 punk preppy",
-    "image": "images/look-26.jpg"
+    "image": "images/look-26.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-027",
@@ -187,7 +205,8 @@ const OUTFITS = [
     "prompt": "oversized forest green and ivory striped rugby shirt, faded black straight-leg jeans, burgundy tartan shirt tied around waist, black lace-up boots, silver chain necklace, black studded belt",
     "desc": "럭비 스트라이프·허리 타탄 레이어",
     "keywords": "럭비 체크 허리 셔츠 부츠 스터드 punk preppy",
-    "image": "images/look-27.jpg"
+    "image": "images/look-27.jpg",
+    "category": "프레피"
   },
   {
     "id": "MW-028",
@@ -197,7 +216,8 @@ const OUTFITS = [
     "prompt": "fitted charcoal short-sleeve t-shirt over ash gray long-sleeve shirt, washed black wide cargo pants, silver gray technical sneakers, thin black cord necklace with silver pendant, black nylon sling bag",
     "desc": "슬림 더블 레이어·와이드 카고",
     "keywords": "회색 차콜 레이어드 카고 나일론 acubi y2k",
-    "image": "images/look-28.jpg"
+    "image": "images/look-28.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-029",
@@ -207,7 +227,8 @@ const OUTFITS = [
     "prompt": "short boxy washed gray zip-up hoodie, cream fitted long-sleeve t-shirt, faded charcoal wide-leg jeans, gray chunky sneakers, black over-ear headphones, small black crossbody bag",
     "desc": "짧은 후드 집업·와이드 데님·헤드폰",
     "keywords": "워시드 후드 집업 헤드폰 데님 acubi y2k",
-    "image": "images/look-29.jpg"
+    "image": "images/look-29.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-030",
@@ -217,7 +238,8 @@ const OUTFITS = [
     "prompt": "charcoal lightweight knit top with asymmetrical hem and seam details, ivory long-sleeve undershirt, muted olive parachute pants, gray running shoes, silver oval pendant necklace, gray slouchy beanie",
     "desc": "비대칭 니트·올리브 파라슈트",
     "keywords": "비대칭 절개 니트 올리브 비니 acubi y2k",
-    "image": "images/look-30.jpg"
+    "image": "images/look-30.jpg",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-001",
@@ -227,7 +249,8 @@ const OUTFITS = [
     "prompt": "navy blouson, white t-shirt, light gray trousers, white sneakers",
     "desc": "네이비 블루종과 밝은 슬랙스",
     "image": "images/look-1.png",
-    "keywords": "네이비 남색 흰색 회색 블루종 슬랙스"
+    "keywords": "네이비 남색 흰색 회색 블루종 슬랙스",
+    "category": "캐주얼·미니멀"
   },
   {
     "id": "MW-002",
@@ -237,7 +260,8 @@ const OUTFITS = [
     "prompt": "sage green cardigan, ivory shirt, beige trousers, brown loafers",
     "desc": "세이지 니트와 부드러운 뉴트럴",
     "image": "images/look-2.png",
-    "keywords": "초록 녹색 세이지 카디건 가디건 베이지"
+    "keywords": "초록 녹색 세이지 카디건 가디건 베이지",
+    "category": "캐주얼·미니멀"
   },
   {
     "id": "MW-003",
@@ -247,7 +271,8 @@ const OUTFITS = [
     "prompt": "navy sweater vest, light blue shirt, cream chinos, burgundy loafers",
     "desc": "셔츠 위 니트 베스트",
     "image": "images/look-3.png",
-    "keywords": "조끼 베스트 셔츠 버건디"
+    "keywords": "조끼 베스트 셔츠 버건디",
+    "category": "프레피"
   },
   {
     "id": "MW-004",
@@ -257,7 +282,8 @@ const OUTFITS = [
     "prompt": "ivory linen shirt, taupe linen trousers, brown sandals",
     "desc": "가벼운 리넨 셋업",
     "image": "images/look-4.png",
-    "keywords": "여름 린넨 리넨 셔츠 샌들"
+    "keywords": "여름 린넨 리넨 셔츠 샌들",
+    "category": "캐주얼·미니멀"
   },
   {
     "id": "MW-005",
@@ -267,7 +293,8 @@ const OUTFITS = [
     "prompt": "charcoal oversized t-shirt, washed denim shorts, gray sneakers, silver necklace",
     "desc": "워시드 데님과 차콜 티셔츠",
     "image": "images/look-5.png",
-    "keywords": "반팔 반바지 청바지 티셔츠 은 목걸이"
+    "keywords": "반팔 반바지 청바지 티셔츠 은 목걸이",
+    "category": "캐주얼·미니멀"
   },
   {
     "id": "MW-006",
@@ -277,7 +304,8 @@ const OUTFITS = [
     "prompt": "teal knit polo, cream pleated shorts, brown boat shoes",
     "desc": "차분한 청록색 니트 폴로",
     "image": "images/look-6.png",
-    "keywords": "청록 반팔 폴로 반바지"
+    "keywords": "청록 반팔 폴로 반바지",
+    "category": "프레피"
   },
   {
     "id": "MW-007",
@@ -287,7 +315,8 @@ const OUTFITS = [
     "prompt": "brown suede jacket, ivory turtleneck, charcoal trousers, brown chelsea boots",
     "desc": "스웨이드 재킷과 터틀넥",
     "image": "images/look-7.png",
-    "keywords": "갈색 스웨이드 부츠 목폴라"
+    "keywords": "갈색 스웨이드 부츠 목폴라",
+    "category": "클래식·올드머니"
   },
   {
     "id": "MW-008",
@@ -297,7 +326,8 @@ const OUTFITS = [
     "prompt": "olive field jacket, gray hoodie, black cargo pants, black sneakers",
     "desc": "올리브 필드 재킷 레이어링",
     "image": "images/look-8.png",
-    "keywords": "카키 올리브 야상 후드 카고"
+    "keywords": "카키 올리브 야상 후드 카고",
+    "category": "스트리트·Y2K"
   },
   {
     "id": "MW-009",
@@ -307,7 +337,8 @@ const OUTFITS = [
     "prompt": "charcoal double-breasted suit, black shirt, black dress shoes, silver wristwatch",
     "desc": "셔츠까지 어둡게 맞춘 수트",
     "image": "images/look-9.png",
-    "keywords": "수트 정장 검정 검은 검은색 차콜 회색"
+    "keywords": "수트 정장 검정 검은 검은색 차콜 회색",
+    "category": "클래식·올드머니"
   },
   {
     "id": "MW-010",
@@ -317,7 +348,8 @@ const OUTFITS = [
     "prompt": "camel long coat, cream cable-knit sweater, dark brown trousers, brown boots, gray scarf",
     "desc": "카멜 코트와 케이블 니트",
     "image": "images/look-10.png",
-    "keywords": "코트 갈색 카멜 니트 목도리"
+    "keywords": "코트 갈색 카멜 니트 목도리",
+    "category": "클래식·올드머니"
   },
   {
     "id": "MW-011",
@@ -327,7 +359,8 @@ const OUTFITS = [
     "prompt": "slate blue puffer jacket, gray sweatshirt, navy corduroy pants, gray sneakers, navy beanie",
     "desc": "블루그레이 패딩과 코듀로이",
     "image": "images/look-11.png",
-    "keywords": "패딩 파랑 블루 비니 골덴"
+    "keywords": "패딩 파랑 블루 비니 골덴",
+    "category": "캐주얼·미니멀"
   },
   {
     "id": "MW-012",
@@ -337,6 +370,7 @@ const OUTFITS = [
     "prompt": "black long coat, charcoal turtleneck, black wide-leg trousers, black chelsea boots, silver ring",
     "desc": "실루엣으로 완성하는 올블랙",
     "image": "images/look-12.png",
-    "keywords": "코트 검정 블랙 목폴라 와이드"
+    "keywords": "코트 검정 블랙 목폴라 와이드",
+    "category": "캐주얼·미니멀"
   }
 ];
