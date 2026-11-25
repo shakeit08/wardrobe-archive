@@ -1,5 +1,45 @@
 const OUTFITS = [
   {
+    "name": "네이비 클럽",
+    "season": "봄",
+    "desc": "네이비 블레이저·옥스퍼드 셔츠·크림 치노",
+    "keywords": "아이비 트래드 네이비 크림 블레이저 봄",
+    "prompt": "navy single-breasted blazer with subtle brass buttons, pale blue oxford button-down shirt with open collar, cream pleated chinos, dark brown penny loafers, dark brown leather belt, simple silver wristwatch with brown leather strap",
+    "id": "MW-031",
+    "style": "올드머니",
+    "image": "images/look-31.jpg"
+  },
+  {
+    "name": "캐시미어 위켄드",
+    "season": "가을",
+    "desc": "크림 케이블 니트·토프 울 슬랙스·스웨이드 로퍼",
+    "keywords": "니트 캐시미어 크림 베이지 토프 가을",
+    "prompt": "cream cable-knit cashmere crewneck sweater over a white oxford shirt with visible collar, taupe pleated wool trousers, chocolate brown suede loafers, dark brown leather belt, simple gold wristwatch with brown leather strap",
+    "id": "MW-032",
+    "style": "올드머니",
+    "image": "images/look-32.jpg"
+  },
+  {
+    "name": "리비에라 리넨",
+    "season": "여름",
+    "desc": "샌드 리넨 셔츠·아이보리 팬츠·브라운 로퍼",
+    "keywords": "리조트 리비에라 리넨 여름 아이보리 베이지",
+    "prompt": "sand beige long-sleeve linen shirt with open collar and rolled cuffs, ivory high-waisted pleated linen trousers, medium brown suede loafers worn without socks, brown woven leather belt, tortoiseshell sunglasses",
+    "id": "MW-033",
+    "style": "올드머니",
+    "image": "images/look-33.jpg"
+  },
+  {
+    "name": "컨트리 에스테이트",
+    "season": "가을",
+    "desc": "올리브 왁스 재킷·버건디 니트·코듀로이",
+    "keywords": "컨트리 헤리티지 올리브 버건디 코듀로이 가을",
+    "prompt": "olive waxed cotton field jacket with dark brown corduroy collar, burgundy fine-knit wool V-neck sweater over an ivory small-check button-down shirt, tan straight-leg corduroy trousers, dark brown leather brogue boots, brown leather belt",
+    "id": "MW-034",
+    "style": "올드머니",
+    "image": "images/look-34.jpg"
+  },
+  {
     "id": "MW-013",
     "name": "아가일 세미나",
     "season": "가을",

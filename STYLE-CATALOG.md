@@ -96,3 +96,30 @@ short boxy washed gray zip-up hoodie, cream fitted long-sleeve t-shirt, faded ch
 ### MW-030 · 언밸런스 웨이브
 
 charcoal lightweight knit top with asymmetrical hem and seam details, ivory long-sleeve undershirt, muted olive parachute pants, gray running shoes, silver oval pendant necklace, gray slouchy beanie
+
+## Old Money — 올드머니 4종
+
+기존 30종 + 올드머니 4종 = 총 34종. 아래 분위기는 코디를 구분하기 위한 기획이며 공식 하위 분류를 뜻하지 않습니다.
+
+| ID | 코디명 | 계절 | 구성 |
+|---|---|---|---|
+| MW-031 | 네이비 클럽 | 봄 | 네이비 블레이저·옥스퍼드 셔츠·크림 치노 |
+| MW-032 | 캐시미어 위켄드 | 가을 | 크림 케이블 니트·토프 울 슬랙스·스웨이드 로퍼 |
+| MW-033 | 리비에라 리넨 | 여름 | 샌드 리넨 셔츠·아이보리 팬츠·브라운 로퍼 |
+| MW-034 | 컨트리 에스테이트 | 가을 | 올리브 왁스 재킷·버건디 니트·코듀로이 |
+
+### MW-031 · 네이비 클럽
+
+navy single-breasted blazer with subtle brass buttons, pale blue oxford button-down shirt with open collar, cream pleated chinos, dark brown penny loafers, dark brown leather belt, simple silver wristwatch with brown leather strap
+
+### MW-032 · 캐시미어 위켄드
+
+cream cable-knit cashmere crewneck sweater over a white oxford shirt with visible collar, taupe pleated wool trousers, chocolate brown suede loafers, dark brown leather belt, simple gold wristwatch with brown leather strap
+
+### MW-033 · 리비에라 리넨
+
+sand beige long-sleeve linen shirt with open collar and rolled cuffs, ivory high-waisted pleated linen trousers, medium brown suede loafers worn without socks, brown woven leather belt, tortoiseshell sunglasses
+
+### MW-034 · 컨트리 에스테이트
+
+olive waxed cotton field jacket with dark brown corduroy collar, burgundy fine-knit wool V-neck sweater over an ivory small-check button-down shirt, tan straight-leg corduroy trousers, dark brown leather brogue boots, brown leather belt
