@@ -1,5 +1,16 @@
 const OUTFITS = [
   {
+    "id": "MW-035",
+    "name": "테디 스노우",
+    "season": "겨울",
+    "category": "스트리트·Y2K",
+    "style": "소프트 Y2K",
+    "desc": "오버핏 니트 베스트·벌룬 쇼츠·폼폼 레그워머·곰돌이 백팩",
+    "keywords": "테디 곰돌이 귀마개 레그워머 폼폼 검정 베스트 브라운 벌룬 쇼츠 남자 젠더리스 soft y2k teddy",
+    "prompt": "oversized black knit sweater vest, white long-sleeve polo shirt, layered sleeves, brown knee-length balloon shorts with subtle gathered hems, dark charcoal tights, slouchy white knit leg warmers with pom-poms, chunky cream sneakers, black earmuffs, teddy bear backpack",
+    "image": "images/look-35.jpg"
+  },
+  {
     "name": "네이비 클럽",
     "season": "봄",
     "desc": "네이비 블레이저·옥스퍼드 셔츠·크림 치노",

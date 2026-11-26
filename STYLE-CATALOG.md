@@ -123,3 +123,11 @@ sand beige long-sleeve linen shirt with open collar and rolled cuffs, ivory high
 ### MW-034 · 컨트리 에스테이트
 
 olive waxed cotton field jacket with dark brown corduroy collar, burgundy fine-knit wool V-neck sweater over an ivory small-check button-down shirt, tan straight-leg corduroy trousers, dark brown leather brogue boots, brown leather belt
+
+## MW-035 · 테디 스노우
+
+대주제: 스트리트·Y2K / 세부 스타일: 소프트 Y2K / 계절: 겨울
+
+오버핏 니트 베스트·벌룬 쇼츠·폼폼 레그워머·곰돌이 백팩
+
+oversized black knit sweater vest, white long-sleeve polo shirt, layered sleeves, brown knee-length balloon shorts with subtle gathered hems, dark charcoal tights, slouchy white knit leg warmers with pom-poms, chunky cream sneakers, black earmuffs, teddy bear backpack
