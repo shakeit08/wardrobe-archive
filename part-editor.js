@@ -1,36 +1,42 @@
+/* Preset garment masks: images/masks/<id>.png stores one label per pixel
+ * (value = (part index + 1) * 16). Tapping a swatch tints that part at once. */
 const PartEditor = (()=>{
  const el=id=>document.getElementById(id);
- let outfit,parts=[],colors={},masks={},active=null,original=null,sourceImage=null,w=0,h=0,revision=0,history=[],frame=0;
- let pickPending=null,keyPoint={x:256,y:384},loadFailed=false;
+ let outfit,parts=[],colors={},masks={},labels=null,LW=0,LH=0,active=null,original=null,sourceImage=null,w=0,h=0,revision=0,frame=0,fade=0,loadFailed=false;
  const canvas=el('colorCanvas'),ctx=canvas.getContext('2d',{willReadFrequently:true});
- const hasMask=id=>masks[id]?.some(v=>v>0);
+ const prev=document.createElement('canvas'),prevCtx=prev.getContext('2d');
+ const hasMask=id=>!!masks[id];
  const changed=()=>parts.filter(p=>PART_COLORS[colors[p.id]]);
- const pending=()=>changed().filter(p=>!hasMask(p.id));
  const status=text=>{el('editorStatus').textContent=text;};
- function emptyMask(){return new Uint8Array(w*h);}
- function snapshot(){history.push({colors:{...colors},masks:Object.fromEntries(Object.entries(masks).map(([id,m])=>[id,m.slice()]))});if(history.length>6)history.shift();}
- function draw(){
-  if(!original)return;
+ const reduced=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function render(){
   let pixels=new Uint8ClampedArray(original.data);
-  if(!el('compareOriginal').checked){
-   for(const p of changed())if(hasMask(p.id))pixels=tintPixels(pixels,masks[p.id],PART_COLORS[colors[p.id]][1]);
-   if(el('showMask').checked&&hasMask(active))for(let i=0;i<w*h;i++)if(masks[active][i]){const k=i*4;pixels[k]=pixels[k]*.55+30*.45;pixels[k+1]=pixels[k+1]*.55+190*.45;pixels[k+2]=pixels[k+2]*.55+180*.45;}
-  }
-  ctx.putImageData(new ImageData(pixels,w,h),0,0);
+  if(!el('compareOriginal').checked)for(const p of changed())if(hasMask(p.id))pixels=tintPixels(pixels,masks[p.id],PART_COLORS[colors[p.id]][1]);
+  return new ImageData(pixels,w,h);
  }
- function scheduleDraw(){if(!frame)frame=requestAnimationFrame(()=>{frame=0;draw();});}
+ function draw(animate){
+  if(!original)return;
+  cancelAnimationFrame(fade);
+  if(!animate||reduced()){ctx.putImageData(render(),0,0);return;}
+  prev.width=w;prev.height=h;prevCtx.drawImage(canvas,0,0);
+  const next=document.createElement('canvas');next.width=w;next.height=h;next.getContext('2d').putImageData(render(),0,0);
+  const start=performance.now();
+  const step=now=>{const t=Math.min(1,(now-start)/240);ctx.globalAlpha=1;ctx.drawImage(prev,0,0);ctx.globalAlpha=t*(2-t);ctx.drawImage(next,0,0);ctx.globalAlpha=1;if(t<1)fade=requestAnimationFrame(step);};
+  fade=requestAnimationFrame(step);
+ }
+ function scheduleDraw(animate){if(animate){draw(true);return;}if(!frame)frame=requestAnimationFrame(()=>{frame=0;draw(false);});}
  function renderRows(){
   const swatch=(p,k)=>`<button type="button" class="swatch" data-color="${k}" data-for="${p.id}" style="--swatch:${PART_COLORS[k][1]}" aria-label="${p.label} ${PART_COLORS[k][0]}" title="${PART_COLORS[k][0]}" aria-pressed="false"></button>`;
-  el('partRows').innerHTML=parts.map(p=>`<section class="partRow" data-row="${p.id}"><button type="button" class="partHead" data-part="${p.id}" aria-pressed="false"><span class="partDot"></span><span class="partName">${p.label}</span><span class="partState"></span><span class="partColorName"></span></button><div class="partSwatches" role="group" aria-label="${p.label} 색상"><button type="button" class="swatch originalSwatch" data-color="original" data-for="${p.id}" aria-label="${p.label} 원본 색상" title="원본" aria-pressed="true">원본</button>${partPalette(p,outfit).map(k=>swatch(p,k)).join('')}</div><button type="button" class="jumpToImage" data-jump="true">사진에서 영역 선택 ↑</button></section>`).join('');
+  el('partRows').innerHTML=parts.map(p=>`<section class="partRow" data-row="${p.id}"><button type="button" class="partHead" data-part="${p.id}" aria-pressed="false"><span class="partDot"></span><span class="partName">${p.label}</span><span class="partState"></span><span class="partColorName"></span></button><div class="partSwatches" role="group" aria-label="${p.label} 색상"><button type="button" class="swatch originalSwatch" data-color="original" data-for="${p.id}" aria-label="${p.label} 원본 색상" title="원본" aria-pressed="true">원본</button>${partPalette(p,outfit).map(k=>swatch(p,k)).join('')}</div></section>`).join('');
  }
- function update(){
+ function update(animate){
   for(const p of parts){
    const row=el('partRows').querySelector(`[data-row="${p.id}"]`);if(!row)continue;
-   const choice=PART_COLORS[colors[p.id]],selected=p.id===active,masked=hasMask(p.id);
+   const choice=PART_COLORS[colors[p.id]],selected=p.id===active;
    row.classList.toggle('is-active',selected);row.classList.toggle('is-colored',!!choice);
    row.querySelector('.partHead').setAttribute('aria-pressed',String(selected));
    row.querySelector('.partDot').style.setProperty('--swatch',choice?choice[1]:'transparent');
-   const state=row.querySelector('.partState');state.textContent=masked?'영역 ✓':choice?'사진을 눌러 주세요':'';state.classList.toggle('is-done',masked);state.classList.toggle('is-waiting',!!choice&&!masked);
+   const state=row.querySelector('.partState');state.textContent=original&&!hasMask(p.id)?'태그만 변경':'';
    row.querySelector('.partColorName').textContent=choice?choice[0]:'원본';
    row.querySelectorAll('[data-color]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.color===(colors[p.id]||'original'))));
   }
@@ -38,64 +44,71 @@ const PartEditor = (()=>{
   el('activePart').textContent=p?p.label:'파츠 선택';
   el('activeDot').style.setProperty('--swatch',choice?choice[1]:'transparent');
   el('activeColor').textContent=choice?choice[0]:'원본';
-  const hint=el('pickHint');hint.hidden=!original||!p||!choice||hasMask(active);if(p)hint.textContent=`사진에서 ${p.label}을(를) 눌러 주세요`;
   el('prompt').value=partPrompt(outfit.prompt,parts,colors);
   el('copy').textContent='의상 태그 복사 ↗';
-  const missing=pending();
-  el('exportColors').disabled=!original||!changed().length||!!missing.length;
-  el('saveCombination').disabled=!original;
-  el('undoMask').disabled=!history.length;
-  el('clearMask').disabled=!hasMask(active);
-  el('exportHelp').textContent=loadFailed?'이미지를 불러오지 못했어요. 원본 다운로드를 사용하거나 다시 열어 주세요.':!original?'이미지를 불러오는 중…':missing.length?`${missing.map(p=>p.label).join(', ')}의 영역을 먼저 지정해 주세요.`:changed().length?'현재 색상과 영역으로 PNG를 저장해요.':'파츠 색상을 선택하면 보정 이미지를 저장할 수 있어요.';
-  scheduleDraw();
+  const painted=changed().filter(p=>hasMask(p.id));
+  el('exportColors').disabled=!original||!painted.length;
+  el('saveCombination').disabled=!outfit;
+  el('exportHelp').textContent=loadFailed?'이미지를 불러오지 못했어요. 원본 다운로드를 사용하거나 다시 열어 주세요.':!original?'이미지를 불러오는 중…':painted.length?'현재 색상으로 원본 해상도 PNG를 저장해요.':'파츠 색상을 고르면 보정 이미지를 저장할 수 있어요.';
+  scheduleDraw(animate);
  }
- function ranges(mask){const out=[];for(let i=0;i<mask.length;i++){if(!mask[i])continue;const start=i;while(i+1<mask.length&&mask[i+1])i++;out.push(start,i-start+1);}return out;}
+ // Label map -> soft per-part alpha at (tw x th) by area averaging.
+ function partAlpha(index,tw,th){
+  const out=new Uint8Array(tw*th),sx=LW/tw,sy=LH/th,target=index+1;let any=false;
+  for(let y=0;y<th;y++){const y0=Math.floor(y*sy),y1=Math.max(y0+1,Math.floor((y+1)*sy));
+   for(let x=0;x<tw;x++){const x0=Math.floor(x*sx),x1=Math.max(x0+1,Math.floor((x+1)*sx));let hit=0,n=0;
+    for(let yy=y0;yy<y1;yy++)for(let xx=x0;xx<x1;xx++){n++;if(labels[yy*LW+xx]===target)hit++;}
+    if(hit){out[y*tw+x]=Math.round(255*hit/n);any=true;}}}
+  return any?out:null;
+ }
+ function feather(mask,tw,th){
+  const out=new Uint8Array(mask.length);
+  for(let y=0;y<th;y++)for(let x=0;x<tw;x++){let s=0,n=0;for(let dy=-1;dy<=1;dy++){const yy=y+dy;if(yy<0||yy>=th)continue;for(let dx=-1;dx<=1;dx++){const xx=x+dx;if(xx<0||xx>=tw)continue;s+=mask[yy*tw+xx];n++;}}out[y*tw+x]=s/n;}
+  return out;
+ }
+ function loadLabels(src){
+  return new Promise(resolve=>{const m=new Image();m.onload=()=>{try{const c=document.createElement('canvas');c.width=m.naturalWidth;c.height=m.naturalHeight;const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(m,0,0);const d=cx.getImageData(0,0,c.width,c.height).data,l=new Uint8Array(c.width*c.height);for(let i=0;i<l.length;i++)l[i]=Math.round(d[i*4]/16);resolve({l,W:c.width,H:c.height});}catch{resolve(null);}};m.onerror=()=>resolve(null);m.src=src;});
+ }
  function restore(saved){
-  if(saved?.version!==1||saved.prompt!==outfit.prompt||saved.w!==w||saved.h!==h)return;
-  for(const p of parts){if(PART_COLORS[saved.colors?.[p.id]])colors[p.id]=saved.colors[p.id];const runs=saved.masks?.[p.id];if(!Array.isArray(runs)||runs.length%2)continue;const m=emptyMask();for(let j=0;j<runs.length;j+=2){const start=runs[j],len=runs[j+1];if(Number.isInteger(start)&&Number.isInteger(len)&&start>=0&&len>0&&start+len<=m.length)m.fill(255,start,start+len);}masks[p.id]=m;}
+  if(!saved||(saved.version!==1&&saved.version!==2)||saved.prompt!==outfit.prompt)return;
+  for(const p of parts)if(PART_COLORS[saved.colors?.[p.id]])colors[p.id]=saved.colors[p.id];
  }
  function open(next){
-  const token=++revision;outfit=next;parts=garmentParts(next.prompt);colors={};masks={};history=[];original=null;sourceImage=null;active=parts[0]?.id;pickPending=null;loadFailed=false;
-  el('compareOriginal').checked=false;el('showMask').checked=false;renderRows();el('partRows').scrollTop=0;
+  const token=++revision;outfit=next;parts=garmentParts(next.prompt);colors={};masks={};labels=null;original=null;sourceImage=null;active=parts[0]?.id;loadFailed=false;
+  el('compareOriginal').checked=false;renderRows();el('partRows').scrollTop=0;
+  try{restore(JSON.parse(localStorage.getItem('wa-parts-'+next.id)||'null'));}catch{}
   el('editorVisual').hidden=!next.image;canvas.hidden=true;el('detailImage').hidden=!next.image;el('editorLoading').hidden=false;
-  status('색을 탭한 뒤 사진에서 해당 옷을 한 번 눌러 주세요.');update();
+  status('색을 탭하면 사진에 바로 입혀져요.');update();
   if(!next.image)return;
   const img=new Image();
-  img.onload=()=>{if(token!==revision)return;sourceImage=img;w=Math.min(512,img.naturalWidth);h=Math.round(img.naturalHeight*w/img.naturalWidth);canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);
+  const imageReady=new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;});img.src=next.image;
+  Promise.all([imageReady,loadLabels('images/masks/'+next.id+'.png')]).then(([,lab])=>{
+   if(token!==revision)return;sourceImage=img;w=Math.min(512,img.naturalWidth);h=Math.round(img.naturalHeight*w/img.naturalWidth);canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);
    try{original=ctx.getImageData(0,0,w,h);}catch{fail();return;}
-   keyPoint={x:Math.floor(w/2),y:Math.floor(h/2)};
-   try{restore(JSON.parse(localStorage.getItem('wa-parts-'+next.id)||'null'));}catch{}
+   if(lab){labels=lab.l;LW=lab.W;LH=lab.H;parts.forEach((p,i)=>{const m=partAlpha(i,w,h);if(m)masks[p.id]=m;});}
+   else status('이 코디는 색상 영역이 없어 태그만 바뀌어요.');
    canvas.hidden=false;el('detailImage').hidden=true;el('editorLoading').hidden=true;update();
-  };
+  }).catch(fail);
   function fail(){if(token!==revision)return;loadFailed=true;el('editorLoading').hidden=true;status('이미지를 불러오지 못했어요. 창을 다시 열어 주세요.');update();}
-  img.onerror=fail;img.src=next.image;
  }
- function applyMask(addition){
-  if(!active)return;if(!masks[active])masks[active]=emptyMask();
-  for(let i=0;i<addition.length;i++)if(addition[i]){masks[active][i]=255;for(const id in masks)if(id!==active)masks[id][i]=0;}
- }
- function pick(x,y){if(!original||!active)return;snapshot();const mask=connectedMask(original.data,w,h,x,y,Number(el('maskTolerance').value));if(mask.reduce((n,v)=>n+(v?1:0),0)>w*h*.45){history.pop();status('배경까지 넓게 선택돼 적용하지 않았어요. 영역 미세 조정에서 선택 범위를 낮춰 주세요.');return;}applyMask(mask);status(`${parts.find(p=>p.id===active).label} 영역에 추가했어요. 다른 조각도 눌러 추가할 수 있어요.`);update();}
- function point(e){const r=canvas.getBoundingClientRect();return {x:Math.max(0,Math.min(w-1,Math.floor((e.clientX-r.left)*w/r.width))),y:Math.max(0,Math.min(h-1,Math.floor((e.clientY-r.top)*h/r.height)))};}
- canvas.addEventListener('pointerdown',e=>{if(!original||!active||el('compareOriginal').checked)return;const p=point(e);keyPoint=p;pickPending=p;});
- canvas.addEventListener('pointerup',e=>{if(!pickPending)return;const p=point(e);if(Math.hypot(p.x-pickPending.x,p.y-pickPending.y)<10)pick(p.x,p.y);pickPending=null;});
- canvas.addEventListener('pointercancel',()=>{pickPending=null;});
- canvas.addEventListener('keydown',e=>{if(!original)return;const dirs={ArrowLeft:[-5,0],ArrowRight:[5,0],ArrowUp:[0,-5],ArrowDown:[0,5]};if(dirs[e.key]){e.preventDefault();keyPoint.x=Math.max(0,Math.min(w-1,keyPoint.x+dirs[e.key][0]));keyPoint.y=Math.max(0,Math.min(h-1,keyPoint.y+dirs[e.key][1]));draw();ctx.strokeStyle='#00b8a9';ctx.lineWidth=2;ctx.strokeRect(keyPoint.x-5,keyPoint.y-5,10,10);}else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!el('compareOriginal').checked)pick(keyPoint.x,keyPoint.y);}});
- el('partRows').onclick=e=>{const b=e.target.closest('[data-color],[data-part],[data-jump]');if(!b)return;if(b.dataset.jump){el('editorVisual').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});canvas.focus({preventScroll:true});return;}if(b.dataset.color){snapshot();active=b.dataset.for;if(b.dataset.color==='original')delete colors[active];else colors[active]=b.dataset.color;el('compareOriginal').checked=false;update();status(hasMask(active)?'색상을 적용했어요.':`${parts.find(p=>p.id===active).label}: 사진에서 이 옷을 눌러 영역을 지정해 주세요.`);}else{active=b.dataset.part;update();status('선택한 파츠의 옷을 사진에서 눌러 주세요.');}};
- el('showMask').onchange=draw;el('compareOriginal').onchange=draw;
- el('undoMask').onclick=()=>{const prev=history.pop();if(!prev)return;colors=prev.colors;masks=prev.masks;update();status('이전 단계로 되돌렸어요.');};
- el('clearMask').onclick=()=>{snapshot();delete masks[active];update();status('이 파츠의 영역을 지웠어요. 다시 선택해 주세요.');};
- el('resetParts').onclick=()=>{snapshot();colors={};masks={};el('compareOriginal').checked=false;update();status('원본으로 돌아왔어요. 저장된 조합도 바꾸려면 조합 저장을 눌러 주세요.');};
- el('saveCombination').onclick=()=>{try{localStorage.setItem('wa-parts-'+outfit.id,JSON.stringify({version:1,prompt:outfit.prompt,w,h,colors,masks:Object.fromEntries(Object.entries(masks).map(([id,m])=>[id,ranges(m)]))}));status('이 브라우저에 조합과 영역을 저장했어요. 다시 열어도 유지돼요.');}catch{status('브라우저 저장 공간이 부족해요. 이미지를 다운로드해서 보관해 주세요.');}};
+ el('partRows').onclick=e=>{const b=e.target.closest('[data-color],[data-part]');if(!b)return;
+  if(b.dataset.color){active=b.dataset.for;const p=parts.find(p=>p.id===active);if(b.dataset.color==='original')delete colors[active];else colors[active]=b.dataset.color;el('compareOriginal').checked=false;update(true);
+   status(b.dataset.color==='original'?`${p.label}을(를) 원본 색으로 되돌렸어요.`:hasMask(active)||!original?`${p.label}에 ${PART_COLORS[colors[active]][0]}을(를) 입혔어요.`:`${p.label}은(는) 사진에서 보이지 않아 태그만 바뀌어요.`);}
+  else{active=b.dataset.part;update();}};
+ el('compareOriginal').onchange=()=>draw(true);
+ el('resetParts').onclick=()=>{colors={};el('compareOriginal').checked=false;update(true);status('원본으로 돌아왔어요. 저장된 조합도 바꾸려면 조합 저장을 눌러 주세요.');};
+ el('saveCombination').onclick=()=>{try{localStorage.setItem('wa-parts-'+outfit.id,JSON.stringify({version:2,prompt:outfit.prompt,colors}));status('이 브라우저에 색상 조합을 저장했어요. 다시 열어도 유지돼요.');}catch{status('브라우저 저장 공간이 부족해요. 이미지를 다운로드해서 보관해 주세요.');}};
  el('exportColors').onclick=async()=>{
-  if(!original||pending().length||!changed().length)return;
-  const token=revision,img=sourceImage,exportW=w,exportH=h,selected=changed().map(p=>({mask:masks[p.id].slice(),hex:PART_COLORS[colors[p.id]][1]})),filename=outfit.id+'-custom.png';
+  const painted=changed().filter(p=>hasMask(p.id));if(!original||!painted.length||!labels)return;
+  const token=revision,img=sourceImage,filename=outfit.id+'-custom.png',list=painted.map(p=>({index:parts.indexOf(p),hex:PART_COLORS[colors[p.id]][1]}));
   el('exportColors').disabled=true;status('원본 해상도로 이미지를 저장하는 중…');
   try{
    await new Promise(requestAnimationFrame);
-   const output=document.createElement('canvas');output.width=img.naturalWidth;output.height=img.naturalHeight;const out=output.getContext('2d');out.drawImage(img,0,0);let pixels=out.getImageData(0,0,output.width,output.height);
-   const small=document.createElement('canvas');small.width=exportW;small.height=exportH;const smallCtx=small.getContext('2d');const large=document.createElement('canvas');large.width=output.width;large.height=output.height;const largeCtx=large.getContext('2d');
-   for(const p of selected){const md=smallCtx.createImageData(exportW,exportH);for(let i=0;i<exportW*exportH;i++)md.data[i*4+3]=p.mask[i];smallCtx.putImageData(md,0,0);largeCtx.clearRect(0,0,large.width,large.height);largeCtx.drawImage(small,0,0,large.width,large.height);const scaled=largeCtx.getImageData(0,0,large.width,large.height).data,mask=new Uint8Array(large.width*large.height);for(let i=0;i<mask.length;i++)mask[i]=scaled[i*4+3];pixels=new ImageData(tintPixels(pixels.data,mask,p.hex),large.width,large.height);}
-   out.putImageData(pixels,0,0);const blob=await new Promise(resolve=>output.toBlob(resolve,'image/png'));if(!blob)throw Error('empty PNG');
+   const output=document.createElement('canvas');output.width=img.naturalWidth;output.height=img.naturalHeight;const out=output.getContext('2d');out.drawImage(img,0,0);
+   let data=out.getImageData(0,0,output.width,output.height).data;
+   for(const p of list){const m=partAlpha(p.index,output.width,output.height);if(m)data=tintPixels(data,feather(m,output.width,output.height),p.hex);}
+   out.putImageData(new ImageData(data,output.width,output.height),0,0);
+   const blob=await new Promise(resolve=>output.toBlob(resolve,'image/png'));if(!blob)throw Error('empty PNG');
    if(token!==revision)return;const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);status('색상 변경 PNG를 다운로드했어요.');
   }catch{if(token===revision)status('이미지 저장에 실패했어요. 다시 시도해 주세요.');}finally{if(token===revision)update();}
  };

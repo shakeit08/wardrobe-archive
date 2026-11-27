@@ -63,7 +63,7 @@ const DENIM_WASHES = ['lightwash','midwash','darkwash','black','ash','white','cr
 const PART_TYPES = [
  ['outer','재킷 / 아우터',/\b(?:jacket|blazer|coat|blouson|suit)\b/i],
  ['layer','가디건 / 레이어',/\b(?:cardigan|bolero|(?:sweater )?vest|hoodie)\b/i],
- ['top','상의',/\b(?:t-shirt|tee|shirt|blouse|camisoles?|tank top|turtleneck|sweater|sweatshirt|jersey|polo|undershirt|top)\b/i],
+ ['top','상의',/\b(?:t-shirt|tee|shirt|blouse|camisoles?|tank top|turtleneck|sweater|sweatshirt|jersey|polo|undershirt|(?<![-\w])top)\b/i],
  ['bottom','하의',/\b(?:miniskirt|skirt|shorts|pants|trousers|jeans|chinos)\b/i],
  ['shoes','신발',/\b(?:boots|sneakers|loafers|brogues|shoes|sandals|flats|heels)\b/i],
  ['leg','양말 / 레그웨어',/\b(?:socks|tights|thighhighs|leg warmers)\b/i],
@@ -127,26 +127,25 @@ function partPrompt(prompt,parts,selections){
  return result;
 }
 
-/* Connected-color selection and luminosity-preserving tint. Pure functions
- * shared by the editor and small synthetic-image regression tests. */
-function connectedMask(rgba,w,h,x,y,tolerance){
- const mask=new Uint8Array(w*h),seen=new Uint8Array(w*h),queue=new Int32Array(w*h);
- const seed=y*w+x,offset=seed*4,sr=rgba[offset],sg=rgba[offset+1],sb=rgba[offset+2];
- const sl=.2126*sr+.7152*sg+.0722*sb;
- let head=0,tail=1;queue[0]=seed;seen[seed]=1;
- while(head<tail){const i=queue[head++],k=i*4,r=rgba[k],g=rgba[k+1],b=rgba[k+2],l=.2126*r+.7152*g+.0722*b;
-  const distance=Math.sqrt(((r-l)-(sr-sl))**2+((g-l)-(sg-sl))**2+((b-l)-(sb-sl))**2+(.65*(l-sl))**2);
-  if(distance>tolerance)continue;mask[i]=255;
-  const px=i%w;for(const n of [px?i-1:-1,px<w-1?i+1:-1,i-w,i+w])if(n>=0&&n<w*h&&!seen[n]){seen[n]=1;queue[tail++]=n;}
- }
- return mask;
-}
+/* Luminosity-preserving tint, shared by the editor and regression tests. */
 function tintPixels(source,mask,hex){
+ // Recolor the garment's dominant tone; contrasting trim, stripes and hardware keep their color.
  const output=new Uint8ClampedArray(source),target=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
- let sum=0,count=0;for(let i=0;i<mask.length;i++)if(mask[i]){const k=i*4;sum+=.2126*source[k]+.7152*source[k+1]+.0722*source[k+2];count++;}
- if(!count)return output;const mean=sum/count;
- for(let i=0;i<mask.length;i++)if(mask[i]){const k=i*4,lum=.2126*source[k]+.7152*source[k+1]+.0722*source[k+2],delta=lum-mean,a=mask[i]/255;
-  for(let c=0;c<3;c++){const t=delta<0?target[c]*Math.max(.08,1+delta/Math.max(mean,24)):target[c]+(255-target[c])*delta/Math.max(255-mean,36);output[k+c]=source[k+c]*(1-a)+Math.max(0,Math.min(255,t))*a;}
+ const lumOf=k=>.2126*source[k]+.7152*source[k+1]+.0722*source[k+2];
+ const bins=new Float32Array(4096);let count=0;
+ for(let i=0;i<mask.length;i++)if(mask[i]>127){const k=i*4;bins[(source[k]>>4)<<8|(source[k+1]>>4)<<4|source[k+2]>>4]+=1;count++;}
+ if(!count)return output;
+ let best=0;for(let i=1;i<4096;i++)if(bins[i]>bins[best])best=i;
+ const c0=[(best>>8&15)*16+8,(best>>4&15)*16+8,(best&15)*16+8];
+ const dist=(k,c,cl)=>{const l=lumOf(k);return Math.sqrt(((source[k]-l)-(c[0]-cl))**2+((source[k+1]-l)-(c[1]-cl))**2+((source[k+2]-l)-(c[2]-cl))**2+(.45*(l-cl))**2);};
+ let c0l=.2126*c0[0]+.7152*c0[1]+.0722*c0[2],sum=[0,0,0],n=0;
+ for(let i=0;i<mask.length;i++)if(mask[i]>127){const k=i*4;if(dist(k,c0,c0l)<40){sum[0]+=source[k];sum[1]+=source[k+1];sum[2]+=source[k+2];n++;}}
+ const anchor=n?sum.map(v=>v/n):c0,al=.2126*anchor[0]+.7152*anchor[1]+.0722*anchor[2],tl=.2126*target[0]+.7152*target[1]+.0722*target[2];
+ for(let i=0;i<mask.length;i++)if(mask[i]){const k=i*4,lum=lumOf(k),delta=lum-al,d=dist(k,anchor,al);
+  const near=d<=40?1:d>=90?0:1-(d-40)/50,a=mask[i]/255*near;if(!a)continue;
+  // Carry the fabric's shading over, scaled to the target's own headroom.
+  const nl=delta<0?tl+delta*Math.min(1.4,Math.max(.35,tl/Math.max(al,24))):tl+delta*Math.min(1.4,Math.max(.35,(255-tl)/Math.max(255-al,24)));
+  for(let c=0;c<3;c++){const t=nl<tl?target[c]*Math.max(.06,nl/Math.max(tl,1)):target[c]+(255-target[c])*Math.min(1,(nl-tl)/Math.max(255-tl,1));output[k+c]=source[k+c]*(1-a)+Math.max(0,Math.min(255,t))*a;}
  }
  return output;
 }
