@@ -31,3 +31,12 @@ body[data-wardrobe="women"] #wardrobeTabs::before{transform:translateX(100%)}
 #detail.textOnly{width:min(520px,92vw)}
 .textOnly .detailLayout{display:block}
 @media(max-width:600px){.promptOnly{padding:18px;gap:16px}.promptOnly strong{font-size:20px}.promptOnlyDesc{font-size:11px}}
+
+.paletteBox{margin:24px 0 0;padding:0;border:0;min-width:0}
+.paletteBox legend{font-size:12px;font-weight:600;margin-bottom:10px}
+#paletteOptions{display:flex;flex-wrap:wrap;gap:7px}
+#paletteOptions button{display:flex;align-items:center;gap:7px;min-height:40px;padding:8px 11px;border:1px solid #d9d6d0;border-radius:22px;background:transparent;color:var(--ink);font-size:11px;transition:background .2s,border-color .2s}
+#paletteOptions button[aria-pressed="true"]{background:var(--soft);border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.paletteSwatches{display:flex;padding-left:3px}.paletteSwatches i{width:12px;height:12px;margin-left:-3px;border-radius:50%;border:1px solid #0002}
+#paletteNote{font-size:10px;line-height:1.7;color:#7e7b75;margin:10px 0 0}
+.paletteBox+.promptBox{margin-top:20px}
