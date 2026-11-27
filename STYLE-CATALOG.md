@@ -175,3 +175,103 @@ beige Harrington jacket with stand collar and subtle tartan lining, navy short-s
 인디고 데님 재킷·흰 티셔츠·베이지 치노·캔버스화
 
 classic indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, brown leather belt, white crew socks, black canvas low-top sneakers with off-white rubber soles
+
+## Womenswear — 여성복 12종
+
+기존 남성복 40종 + 여성복 12종 = 총 52종.
+
+### WW-001 · 리본 세미나
+
+프레피 / 봄
+
+네이비 가디건·리본 셔츠·그레이 플리츠 스커트
+
+navy fitted cardigan, white collared blouse with a burgundy ribbon tie, gray knee-length pleated skirt, white crew socks, black penny loafers, brown leather satchel
+
+### WW-002 · 아가일 캠퍼스
+
+프레피 / 가을
+
+아가일 베스트·블루 셔츠·차콜 버뮤다·안경
+
+gray and burgundy argyle sweater vest, pale blue button-down shirt, charcoal tailored bermuda shorts, dark gray knee-high socks, black chunky loafers, slim oval metal glasses
+
+### WW-003 · 체크 스터디
+
+프레피 / 겨울
+
+네이비 블레이저·크림 터틀넥·타탄 스커트
+
+navy wool blazer with ivory piping, cream turtleneck sweater, burgundy and navy tartan A-line knee-length skirt, opaque black tights, dark brown leather ankle boots
+
+### WW-004 · 아이보리 살롱
+
+클래식·올드머니 / 봄
+
+아이보리 트위드 재킷·실크 블라우스·네이비 슬랙스
+
+ivory collarless tweed jacket with subtle gold buttons, ivory silk blouse, navy high-waisted wide-leg tailored trousers, beige leather slingback low heels, small structured tan leather handbag
+
+### WW-005 · 리비에라 테라스
+
+클래식·올드머니 / 여름
+
+샌드 리넨 셔츠·아이보리 미디 스커트·샌들
+
+sand beige short-sleeve linen shirt, ivory A-line linen midi skirt, brown woven leather belt, tan leather flat sandals, small straw tote bag with leather handles, tortoiseshell sunglasses
+
+### WW-006 · 캐시미어 애프터눈
+
+클래식·올드머니 / 겨울
+
+카멜 코트·크림 캐시미어·토프 울 팬츠
+
+camel wool wrap coat with matching belt, cream cashmere crewneck sweater, taupe pleated wool trousers, dark brown suede ankle boots, chocolate brown structured leather shoulder bag
+
+### WW-007 · 벨루어 스타
+
+스트리트·Y2K / 가을
+
+더스티 핑크 벨루어 셋업·큐빅 포인트·숄더백
+
+dusty pink velour zip hoodie with small rhinestone star detail, matching dusty pink velour bootcut track pants, white ribbed tank top, white chunky sneakers, small silver shoulder bag, tinted narrow sunglasses
+
+### WW-008 · 애시 레이어
+
+스트리트·Y2K / 봄
+
+차콜 반팔·그레이 긴팔·워시드 카고
+
+fitted charcoal short-sleeve t-shirt over ash gray long-sleeve shirt, washed black wide-leg cargo pants, silver gray technical sneakers, black nylon shoulder bag, thin black cord necklace with silver pendant
+
+### WW-009 · 레이싱 블루
+
+스트리트·Y2K / 여름
+
+블루 레이싱 재킷·흰 탱크·데님 카고 미디 스커트
+
+lightweight slate blue racing jacket with ivory panels, white ribbed tank top, faded blue denim cargo midi skirt with front slit, white crew socks, chunky gray sneakers, black small shoulder bag
+
+### WW-010 · 스트라이프 브런치
+
+캐주얼·미니멀 / 봄
+
+브레통 스트라이프·스트레이트 데님·발레 플랫
+
+ivory and navy Breton striped long-sleeve top, medium blue straight-leg jeans, tan leather belt, black leather ballet flats, cream canvas tote bag
+
+### WW-011 · 데님 데이오프
+
+캐주얼·미니멀 / 가을
+
+인디고 청재킷·흰 티·베이지 치노
+
+indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, white crew socks, black canvas low-top sneakers, brown leather belt
+
+### WW-012 · 그레이 라운지
+
+캐주얼·미니멀 / 겨울
+
+차콜 울 재킷·오트밀 니트·크림 와이드 팬츠
+
+charcoal short wool jacket, oatmeal knit crewneck sweater, cream wide-leg corduroy trousers, gray suede low-top sneakers, light gray wool scarf

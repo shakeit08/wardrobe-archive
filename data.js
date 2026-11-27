@@ -8,7 +8,8 @@ const OUTFITS = [
     "keywords": "야구잠바 바시티 재킷 후드 청바지 네이비 회색 스니커즈 대학 varsity",
     "prompt": "navy wool varsity jacket with ivory leather sleeves and striped ribbed cuffs, heather gray pullover hoodie, medium blue straight-leg jeans, white crew socks, white and navy low-top sneakers",
     "id": "MW-038",
-    "image": "images/look-38.jpg"
+    "image": "images/look-38.jpg",
+    "wardrobe": "men"
   },
   {
     "name": "해링턴 산책",
@@ -19,7 +20,8 @@ const OUTFITS = [
     "keywords": "해링턴 블루종 베이지 니트 폴로 올리브 치노 로퍼 harrington",
     "prompt": "beige Harrington jacket with stand collar and subtle tartan lining, navy short-sleeve knit polo shirt, olive straight-leg chinos, dark brown leather belt, dark brown penny loafers",
     "id": "MW-039",
-    "image": "images/look-39.jpg"
+    "image": "images/look-39.jpg",
+    "wardrobe": "men"
   },
   {
     "name": "데님 스탠더드",
@@ -30,7 +32,8 @@ const OUTFITS = [
     "keywords": "청재킷 데님 재킷 흰티 베이지 치노 캔버스화 인디고 denim",
     "prompt": "classic indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, brown leather belt, white crew socks, black canvas low-top sneakers with off-white rubber soles",
     "id": "MW-040",
-    "image": "images/look-40.jpg"
+    "image": "images/look-40.jpg",
+    "wardrobe": "men"
   },
   {
     "name": "브라운 인터루드",
@@ -41,7 +44,8 @@ const OUTFITS = [
     "keywords": "트렌치 브라운 갈색 코트 풀어진 벨트 셔츠 터틀넥 코듀로이 첼시 부츠",
     "prompt": "open brown trench coat with untied hanging coat belt, loose white collared shirt partially unbuttoned over a black turtleneck, layered clothes, brown straight-leg corduroy pants, dark brown leather belt, black leather chelsea ankle boots, brown wool scarf, simple wristwatch with dark brown leather strap, brown framed glasses, dark brown leather wallet",
     "id": "MW-036",
-    "image": "images/look-36.jpg"
+    "image": "images/look-36.jpg",
+    "wardrobe": "men"
   },
   {
     "name": "네이비 몽마르트르",
@@ -52,7 +56,8 @@ const OUTFITS = [
     "keywords": "베레모 울 가죽 재킷 타탄 체크 네이비 머플러 버뮤다 반바지 롱삭스 첼시 부츠",
     "prompt": "structured black wool felt beret, black leather jacket, oversized bulky dark navy tartan wool scarf in muted colors, black turtleneck, navy plaid wool tweed bermuda shorts, slouchy dark gray over-the-knee socks with wrinkles, black leather chelsea ankle boots",
     "id": "MW-037",
-    "image": "images/look-37.jpg"
+    "image": "images/look-37.jpg",
+    "wardrobe": "men"
   },
   {
     "id": "MW-035",
@@ -63,7 +68,8 @@ const OUTFITS = [
     "desc": "오버핏 니트 베스트·벌룬 쇼츠·폼폼 레그워머·곰돌이 백팩",
     "keywords": "테디 곰돌이 귀마개 레그워머 폼폼 검정 베스트 브라운 벌룬 쇼츠 남자 젠더리스 soft y2k teddy",
     "prompt": "oversized black knit sweater vest, white long-sleeve polo shirt, layered sleeves, brown knee-length balloon shorts with subtle gathered hems, dark charcoal tights, slouchy white knit leg warmers with pom-poms, chunky cream sneakers, black earmuffs, teddy bear backpack",
-    "image": "images/look-35.jpg"
+    "image": "images/look-35.jpg",
+    "wardrobe": "men"
   },
   {
     "name": "네이비 클럽",
@@ -74,7 +80,8 @@ const OUTFITS = [
     "id": "MW-031",
     "style": "올드머니",
     "image": "images/look-31.jpg",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "name": "캐시미어 위켄드",
@@ -85,7 +92,8 @@ const OUTFITS = [
     "id": "MW-032",
     "style": "올드머니",
     "image": "images/look-32.jpg",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "name": "리비에라 리넨",
@@ -96,7 +104,8 @@ const OUTFITS = [
     "id": "MW-033",
     "style": "올드머니",
     "image": "images/look-33.jpg",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "name": "컨트리 에스테이트",
@@ -107,7 +116,8 @@ const OUTFITS = [
     "id": "MW-034",
     "style": "올드머니",
     "image": "images/look-34.jpg",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "id": "MW-013",
@@ -118,7 +128,8 @@ const OUTFITS = [
     "desc": "아가일 베스트·스트라이프 타이·사각 안경",
     "keywords": "아가일 조끼 베스트 셔츠 타이 안경 사첼 geek chic preppy",
     "image": "images/look-13.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-014",
@@ -129,7 +140,8 @@ const OUTFITS = [
     "desc": "슬림 카디건·버뮤다·크루 삭스",
     "keywords": "갈색 카디건 반바지 버뮤다 안경 geek chic preppy",
     "image": "images/look-14.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-015",
@@ -140,7 +152,8 @@ const OUTFITS = [
     "desc": "트위드와 모스그린 니트 폴로",
     "keywords": "트위드 재킷 골덴 코듀로이 안경 geek chic preppy",
     "image": "images/look-15.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-016",
@@ -151,7 +164,8 @@ const OUTFITS = [
     "desc": "레이싱 패널 재킷·배기 데님",
     "keywords": "레이싱 블루 배기 청바지 선글라스 y2k streetwear",
     "image": "images/look-16.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-017",
@@ -162,7 +176,8 @@ const OUTFITS = [
     "desc": "메시 저지·카고 쇼츠·스케이트 슈즈",
     "keywords": "농구 저지 메시 반팔 카고 반바지 y2k streetwear",
     "image": "images/look-17.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-018",
@@ -173,7 +188,8 @@ const OUTFITS = [
     "desc": "곡선 트랙 재킷·파라슈트 팬츠",
     "keywords": "은색 트랙 트레이닝 나일론 비니 y2k streetwear",
     "image": "images/look-18.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-019",
@@ -184,7 +200,8 @@ const OUTFITS = [
     "desc": "버건디 벨루어 셋업·라인스톤",
     "keywords": "벨루어 벨벳 버건디 반짝 주얼리 mcbling y2k",
     "image": "images/look-19.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-020",
@@ -195,7 +212,8 @@ const OUTFITS = [
     "desc": "라인스톤 부츠컷·큰 버클·트러커 캡",
     "keywords": "데님 부츠컷 라인스톤 십자가 벨트 mcbling y2k",
     "image": "images/look-20.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-021",
@@ -206,7 +224,8 @@ const OUTFITS = [
     "desc": "샴페인 새틴 봄버·장식 버클",
     "keywords": "새틴 광택 봄버 인디고 별 주얼리 mcbling y2k",
     "image": "images/look-21.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-022",
@@ -217,7 +236,8 @@ const OUTFITS = [
     "desc": "낡은 바이커 재킷·스키니·좁은 스카프",
     "keywords": "가죽 라이더 스키니 스카프 indie sleaze",
     "image": "images/look-22.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-023",
@@ -228,7 +248,8 @@ const OUTFITS = [
     "desc": "해진 줄무늬 니트·워시드 슬림 데님",
     "keywords": "줄무늬 스트라이프 찢청 페도라 indie sleaze",
     "image": "images/look-23.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-024",
@@ -239,7 +260,8 @@ const OUTFITS = [
     "desc": "구겨진 셔츠·느슨한 타이·슬림 블레이저",
     "keywords": "블레이저 셔츠 타이 스키니 indie sleaze",
     "image": "images/look-24.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-025",
@@ -250,7 +272,8 @@ const OUTFITS = [
     "desc": "파이핑 블레이저·타탄 팬츠·워커",
     "keywords": "체크 타탄 블레이저 워커 안전핀 punk preppy",
     "image": "images/look-25.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-026",
@@ -261,7 +284,8 @@ const OUTFITS = [
     "desc": "찢어진 아가일·테일러드 쇼츠·체인",
     "keywords": "아가일 니트 반바지 니삭스 체인 punk preppy",
     "image": "images/look-26.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-027",
@@ -272,7 +296,8 @@ const OUTFITS = [
     "desc": "럭비 스트라이프·허리 타탄 레이어",
     "keywords": "럭비 체크 허리 셔츠 부츠 스터드 punk preppy",
     "image": "images/look-27.jpg",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-028",
@@ -283,7 +308,8 @@ const OUTFITS = [
     "desc": "슬림 더블 레이어·와이드 카고",
     "keywords": "회색 차콜 레이어드 카고 나일론 acubi y2k",
     "image": "images/look-28.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-029",
@@ -294,7 +320,8 @@ const OUTFITS = [
     "desc": "짧은 후드 집업·와이드 데님·헤드폰",
     "keywords": "워시드 후드 집업 헤드폰 데님 acubi y2k",
     "image": "images/look-29.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-030",
@@ -305,7 +332,8 @@ const OUTFITS = [
     "desc": "비대칭 니트·올리브 파라슈트",
     "keywords": "비대칭 절개 니트 올리브 비니 acubi y2k",
     "image": "images/look-30.jpg",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-001",
@@ -316,7 +344,8 @@ const OUTFITS = [
     "desc": "네이비 블루종과 밝은 슬랙스",
     "image": "images/look-1.png",
     "keywords": "네이비 남색 흰색 회색 블루종 슬랙스",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
   },
   {
     "id": "MW-002",
@@ -327,7 +356,8 @@ const OUTFITS = [
     "desc": "세이지 니트와 부드러운 뉴트럴",
     "image": "images/look-2.png",
     "keywords": "초록 녹색 세이지 카디건 가디건 베이지",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
   },
   {
     "id": "MW-003",
@@ -338,7 +368,8 @@ const OUTFITS = [
     "desc": "셔츠 위 니트 베스트",
     "image": "images/look-3.png",
     "keywords": "조끼 베스트 셔츠 버건디",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-004",
@@ -349,7 +380,8 @@ const OUTFITS = [
     "desc": "가벼운 리넨 셋업",
     "image": "images/look-4.png",
     "keywords": "여름 린넨 리넨 셔츠 샌들",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
   },
   {
     "id": "MW-005",
@@ -360,7 +392,8 @@ const OUTFITS = [
     "desc": "워시드 데님과 차콜 티셔츠",
     "image": "images/look-5.png",
     "keywords": "반팔 반바지 청바지 티셔츠 은 목걸이",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
   },
   {
     "id": "MW-006",
@@ -371,7 +404,8 @@ const OUTFITS = [
     "desc": "차분한 청록색 니트 폴로",
     "image": "images/look-6.png",
     "keywords": "청록 반팔 폴로 반바지",
-    "category": "프레피"
+    "category": "프레피",
+    "wardrobe": "men"
   },
   {
     "id": "MW-007",
@@ -382,7 +416,8 @@ const OUTFITS = [
     "desc": "스웨이드 재킷과 터틀넥",
     "image": "images/look-7.png",
     "keywords": "갈색 스웨이드 부츠 목폴라",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "id": "MW-008",
@@ -393,7 +428,8 @@ const OUTFITS = [
     "desc": "올리브 필드 재킷 레이어링",
     "image": "images/look-8.png",
     "keywords": "카키 올리브 야상 후드 카고",
-    "category": "스트리트·Y2K"
+    "category": "스트리트·Y2K",
+    "wardrobe": "men"
   },
   {
     "id": "MW-009",
@@ -404,7 +440,8 @@ const OUTFITS = [
     "desc": "셔츠까지 어둡게 맞춘 수트",
     "image": "images/look-9.png",
     "keywords": "수트 정장 검정 검은 검은색 차콜 회색",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "id": "MW-010",
@@ -415,7 +452,8 @@ const OUTFITS = [
     "desc": "카멜 코트와 케이블 니트",
     "image": "images/look-10.png",
     "keywords": "코트 갈색 카멜 니트 목도리",
-    "category": "클래식·올드머니"
+    "category": "클래식·올드머니",
+    "wardrobe": "men"
   },
   {
     "id": "MW-011",
@@ -426,7 +464,8 @@ const OUTFITS = [
     "desc": "블루그레이 패딩과 코듀로이",
     "image": "images/look-11.png",
     "keywords": "패딩 파랑 블루 비니 골덴",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
   },
   {
     "id": "MW-012",
@@ -437,6 +476,151 @@ const OUTFITS = [
     "desc": "실루엣으로 완성하는 올블랙",
     "image": "images/look-12.png",
     "keywords": "코트 검정 블랙 목폴라 와이드",
-    "category": "캐주얼·미니멀"
+    "category": "캐주얼·미니멀",
+    "wardrobe": "men"
+  },
+  {
+    "id": "WW-001",
+    "wardrobe": "women",
+    "name": "리본 세미나",
+    "season": "봄",
+    "category": "프레피",
+    "style": "클래식 프레피",
+    "desc": "네이비 가디건·리본 셔츠·그레이 플리츠 스커트",
+    "prompt": "navy fitted cardigan, white collared blouse with a burgundy ribbon tie, gray knee-length pleated skirt, white crew socks, black penny loafers, brown leather satchel",
+    "keywords": "네이비 가디건 리본 셔츠 그레이 플리츠 스커트 여성복 여자 클래식 프레피",
+    "image": "images/women-1.jpg"
+  },
+  {
+    "id": "WW-002",
+    "wardrobe": "women",
+    "name": "아가일 캠퍼스",
+    "season": "가을",
+    "category": "프레피",
+    "style": "긱시크 프레피",
+    "desc": "아가일 베스트·블루 셔츠·차콜 버뮤다·안경",
+    "prompt": "gray and burgundy argyle sweater vest, pale blue button-down shirt, charcoal tailored bermuda shorts, dark gray knee-high socks, black chunky loafers, slim oval metal glasses",
+    "keywords": "아가일 베스트 블루 셔츠 차콜 버뮤다 안경 여성복 여자 긱시크 프레피",
+    "image": "images/women-2.jpg"
+  },
+  {
+    "id": "WW-003",
+    "wardrobe": "women",
+    "name": "체크 스터디",
+    "season": "겨울",
+    "category": "프레피",
+    "style": "클래식 프레피",
+    "desc": "네이비 블레이저·크림 터틀넥·타탄 스커트",
+    "prompt": "navy wool blazer with ivory piping, cream turtleneck sweater, burgundy and navy tartan A-line knee-length skirt, opaque black tights, dark brown leather ankle boots",
+    "keywords": "네이비 블레이저 크림 터틀넥 타탄 스커트 여성복 여자 클래식 프레피",
+    "image": "images/women-3.jpg"
+  },
+  {
+    "id": "WW-004",
+    "wardrobe": "women",
+    "name": "아이보리 살롱",
+    "season": "봄",
+    "category": "클래식·올드머니",
+    "style": "올드머니",
+    "desc": "아이보리 트위드 재킷·실크 블라우스·네이비 슬랙스",
+    "prompt": "ivory collarless tweed jacket with subtle gold buttons, ivory silk blouse, navy high-waisted wide-leg tailored trousers, beige leather slingback low heels, small structured tan leather handbag",
+    "keywords": "아이보리 트위드 재킷 실크 블라우스 네이비 슬랙스 여성복 여자 올드머니",
+    "image": "images/women-4.jpg"
+  },
+  {
+    "id": "WW-005",
+    "wardrobe": "women",
+    "name": "리비에라 테라스",
+    "season": "여름",
+    "category": "클래식·올드머니",
+    "style": "올드머니",
+    "desc": "샌드 리넨 셔츠·아이보리 미디 스커트·샌들",
+    "prompt": "sand beige short-sleeve linen shirt, ivory A-line linen midi skirt, brown woven leather belt, tan leather flat sandals, small straw tote bag with leather handles, tortoiseshell sunglasses",
+    "keywords": "샌드 리넨 셔츠 아이보리 미디 스커트 샌들 여성복 여자 올드머니",
+    "image": "images/women-5.jpg"
+  },
+  {
+    "id": "WW-006",
+    "wardrobe": "women",
+    "name": "캐시미어 애프터눈",
+    "season": "겨울",
+    "category": "클래식·올드머니",
+    "style": "올드머니",
+    "desc": "카멜 코트·크림 캐시미어·토프 울 팬츠",
+    "prompt": "camel wool wrap coat with matching belt, cream cashmere crewneck sweater, taupe pleated wool trousers, dark brown suede ankle boots, chocolate brown structured leather shoulder bag",
+    "keywords": "카멜 코트 크림 캐시미어 토프 울 팬츠 여성복 여자 올드머니",
+    "image": "images/women-6.jpg"
+  },
+  {
+    "id": "WW-007",
+    "wardrobe": "women",
+    "name": "벨루어 스타",
+    "season": "가을",
+    "category": "스트리트·Y2K",
+    "style": "맥블링 Y2K",
+    "desc": "더스티 핑크 벨루어 셋업·큐빅 포인트·숄더백",
+    "prompt": "dusty pink velour zip hoodie with small rhinestone star detail, matching dusty pink velour bootcut track pants, white ribbed tank top, white chunky sneakers, small silver shoulder bag, tinted narrow sunglasses",
+    "keywords": "더스티 핑크 벨루어 셋업 큐빅 포인트 숄더백 여성복 여자 맥블링 Y2K",
+    "image": "images/women-7.jpg"
+  },
+  {
+    "id": "WW-008",
+    "wardrobe": "women",
+    "name": "애시 레이어",
+    "season": "봄",
+    "category": "스트리트·Y2K",
+    "style": "아쿠비 Y2K",
+    "desc": "차콜 반팔·그레이 긴팔·워시드 카고",
+    "prompt": "fitted charcoal short-sleeve t-shirt over ash gray long-sleeve shirt, washed black wide-leg cargo pants, silver gray technical sneakers, black nylon shoulder bag, thin black cord necklace with silver pendant",
+    "keywords": "차콜 반팔 그레이 긴팔 워시드 카고 여성복 여자 아쿠비 Y2K",
+    "image": "images/women-8.jpg"
+  },
+  {
+    "id": "WW-009",
+    "wardrobe": "women",
+    "name": "레이싱 블루",
+    "season": "여름",
+    "category": "스트리트·Y2K",
+    "style": "Y2K 스트리트웨어",
+    "desc": "블루 레이싱 재킷·흰 탱크·데님 카고 미디 스커트",
+    "prompt": "lightweight slate blue racing jacket with ivory panels, white ribbed tank top, faded blue denim cargo midi skirt with front slit, white crew socks, chunky gray sneakers, black small shoulder bag",
+    "keywords": "블루 레이싱 재킷 흰 탱크 데님 카고 미디 스커트 여성복 여자 Y2K 스트리트웨어",
+    "image": "images/women-9.jpg"
+  },
+  {
+    "id": "WW-010",
+    "wardrobe": "women",
+    "name": "스트라이프 브런치",
+    "season": "봄",
+    "category": "캐주얼·미니멀",
+    "style": "클래식 캐주얼",
+    "desc": "브레통 스트라이프·스트레이트 데님·발레 플랫",
+    "prompt": "ivory and navy Breton striped long-sleeve top, medium blue straight-leg jeans, tan leather belt, black leather ballet flats, cream canvas tote bag",
+    "keywords": "브레통 스트라이프 스트레이트 데님 발레 플랫 여성복 여자 클래식 캐주얼",
+    "image": "images/women-10.jpg"
+  },
+  {
+    "id": "WW-011",
+    "wardrobe": "women",
+    "name": "데님 데이오프",
+    "season": "가을",
+    "category": "캐주얼·미니멀",
+    "style": "클래식 캐주얼",
+    "desc": "인디고 청재킷·흰 티·베이지 치노",
+    "prompt": "indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, white crew socks, black canvas low-top sneakers, brown leather belt",
+    "keywords": "인디고 청재킷 흰 티 베이지 치노 여성복 여자 클래식 캐주얼",
+    "image": "images/women-11.jpg"
+  },
+  {
+    "id": "WW-012",
+    "wardrobe": "women",
+    "name": "그레이 라운지",
+    "season": "겨울",
+    "category": "캐주얼·미니멀",
+    "style": "미니멀",
+    "desc": "차콜 울 재킷·오트밀 니트·크림 와이드 팬츠",
+    "prompt": "charcoal short wool jacket, oatmeal knit crewneck sweater, cream wide-leg corduroy trousers, gray suede low-top sneakers, light gray wool scarf",
+    "keywords": "차콜 울 재킷 오트밀 니트 크림 와이드 팬츠 여성복 여자 미니멀",
+    "image": "images/women-12.jpg"
   }
 ];
