@@ -1,5 +1,38 @@
 const OUTFITS = [
   {
+    "name": "바시티 위켄드",
+    "season": "가을",
+    "category": "캐주얼·미니멀",
+    "style": "아메리칸 캐주얼",
+    "desc": "네이비 바시티·그레이 후드·스트레이트 데님·스니커즈",
+    "keywords": "야구잠바 바시티 재킷 후드 청바지 네이비 회색 스니커즈 대학 varsity",
+    "prompt": "navy wool varsity jacket with ivory leather sleeves and striped ribbed cuffs, heather gray pullover hoodie, medium blue straight-leg jeans, white crew socks, white and navy low-top sneakers",
+    "id": "MW-038",
+    "image": "images/look-38.jpg"
+  },
+  {
+    "name": "해링턴 산책",
+    "season": "봄",
+    "category": "클래식·올드머니",
+    "style": "클래식 캐주얼",
+    "desc": "베이지 해링턴·네이비 니트 폴로·올리브 치노·로퍼",
+    "keywords": "해링턴 블루종 베이지 니트 폴로 올리브 치노 로퍼 harrington",
+    "prompt": "beige Harrington jacket with stand collar and subtle tartan lining, navy short-sleeve knit polo shirt, olive straight-leg chinos, dark brown leather belt, dark brown penny loafers",
+    "id": "MW-039",
+    "image": "images/look-39.jpg"
+  },
+  {
+    "name": "데님 스탠더드",
+    "season": "봄",
+    "category": "캐주얼·미니멀",
+    "style": "아메리칸 캐주얼",
+    "desc": "인디고 데님 재킷·흰 티셔츠·베이지 치노·캔버스화",
+    "keywords": "청재킷 데님 재킷 흰티 베이지 치노 캔버스화 인디고 denim",
+    "prompt": "classic indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, brown leather belt, white crew socks, black canvas low-top sneakers with off-white rubber soles",
+    "id": "MW-040",
+    "image": "images/look-40.jpg"
+  },
+  {
     "name": "브라운 인터루드",
     "season": "가을",
     "category": "클래식·올드머니",

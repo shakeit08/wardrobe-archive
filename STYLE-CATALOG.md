@@ -149,3 +149,29 @@ open brown trench coat with untied hanging coat belt, loose white collared shirt
 블랙 베레모·레더 재킷·타탄 머플러·체크 울 버뮤다
 
 structured black wool felt beret, black leather jacket, oversized bulky dark navy tartan wool scarf in muted colors, black turtleneck, navy plaid wool tweed bermuda shorts, slouchy dark gray over-the-knee socks with wrinkles, black leather chelsea ankle boots
+
+## 클래식 캐주얼 3종
+
+### MW-038 · 바시티 위켄드
+
+캐주얼·미니멀 / 가을
+
+네이비 바시티·그레이 후드·스트레이트 데님·스니커즈
+
+navy wool varsity jacket with ivory leather sleeves and striped ribbed cuffs, heather gray pullover hoodie, medium blue straight-leg jeans, white crew socks, white and navy low-top sneakers
+
+### MW-039 · 해링턴 산책
+
+클래식·올드머니 / 봄
+
+베이지 해링턴·네이비 니트 폴로·올리브 치노·로퍼
+
+beige Harrington jacket with stand collar and subtle tartan lining, navy short-sleeve knit polo shirt, olive straight-leg chinos, dark brown leather belt, dark brown penny loafers
+
+### MW-040 · 데님 스탠더드
+
+캐주얼·미니멀 / 봄
+
+인디고 데님 재킷·흰 티셔츠·베이지 치노·캔버스화
+
+classic indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg chinos, brown leather belt, white crew socks, black canvas low-top sneakers with off-white rubber soles
