@@ -5,7 +5,11 @@ const PART_COLORS = {
  navy:['네이비','#33415e','navy'], blue:['블루','#7196b6','dusty blue'], brown:['브라운','#795743','chocolate brown'],
  camel:['카멜','#b4926d','camel'], burgundy:['버건디','#773c4d','burgundy'], green:['세이지','#87927a','sage green'],
  olive:['올리브','#62694d','olive'], pink:['더스티 핑크','#c58e9c','dusty pink'], lavender:['라벤더','#aaa0c2','lavender'],
- yellow:['버터 옐로','#deca89','butter yellow'], gray:['그레이','#999ba3','gray']
+ yellow:['버터 옐로','#deca89','butter yellow'], gray:['그레이','#999ba3','gray'],
+ mint:['민트','#7bd9b5','mint green'], red:['레드','#df303d','red'], cobalt:['코발트','#315be3','cobalt blue'],
+ coral:['코랄','#f27c70','coral'], turquoise:['터쿼이즈','#28babc','turquoise'], orange:['오렌지','#f28b35','orange'],
+ lemon:['레몬 옐로','#f3d94e','lemon yellow'], emerald:['에메랄드','#18946a','emerald green'],
+ hotpink:['핫핑크','#e84694','hot pink'], purple:['바이올렛','#8651c3','violet']
 };
 const PART_TYPES = [
  ['outer','재킷 / 아우터',/\b(?:jacket|blazer|coat|blouson|suit)\b/i],
@@ -19,7 +23,7 @@ const PART_TYPES = [
  ['belt','벨트',/\bbelt\b/i],
  ['hat','모자 / 헤어',/\b(?:beret|beanie|hat|cap|headband|earmuffs|hair ribbon|hair clips)\b/i]
 ];
-const PART_COLOR_WORDS = [...new Set([...COLOR_WORDS,'dusty blue','butter yellow','dark grey','light grey','grey','lavender','red','green','yellow','purple','orange','silver','gold'])].sort((a,b)=>b.length-a.length);
+const PART_COLOR_WORDS = [...new Set([...COLOR_WORDS,...Object.values(PART_COLORS).map(c=>c[2]),'dusty blue','butter yellow','dark grey','light grey','grey','lavender','red','green','yellow','purple','orange','silver','gold'])].sort((a,b)=>b.length-a.length);
 function garmentParts(prompt){
  const parts=[];
  // Keep offsets into the original prompt, including layered garments in one tag.
@@ -43,14 +47,17 @@ function garmentParts(prompt){
  return parts;
 }
 function partPalette(part,outfit){
- let keys=['ivory','black','navy','brown','burgundy','green'];
- if(/ballet|mcbling|pink|발레|맥블링/i.test(outfit.prompt+' '+outfit.style))keys=['ivory','pink','lavender','blue','black','yellow'];
- else if(/acubi|아쿠비|sleaze|슬리즈/i.test(outfit.prompt+' '+outfit.style))keys=['black','charcoal','gray','ivory','blue','burgundy'];
- else if(/old money|올드머니|클래식/i.test(outfit.category+' '+outfit.style))keys=['ivory','navy','camel','brown','olive','burgundy'];
- if(part.type==='shoes'||part.type==='belt'||part.type==='bag')keys=['black','brown','ivory',...keys.filter(k=>!['black','brown','ivory'].includes(k))].slice(0,6);
- if(part.noun==='jeans')keys=['blue','navy','black','gray','ivory','brown'];
+ const vibe=outfit.prompt+' '+outfit.style;
+ let keys=['ivory','black','navy','brown','mint','red','cobalt','lemon','emerald','coral','lavender','orange'];
+ if(/ballet|발레/i.test(vibe))keys=['ivory','pink','lavender','yellow','mint','red','coral','blue','turquoise','hotpink','purple','black'];
+ else if(/mcbling|pink|맥블링/i.test(vibe))keys=['ivory','black','pink','lavender','mint','red','hotpink','cobalt','lemon','coral','turquoise','purple'];
+ else if(/acubi|아쿠비|sleaze|슬리즈/i.test(vibe))keys=['black','charcoal','gray','ivory','mint','red','cobalt','emerald','hotpink','purple','orange','turquoise'];
+ else if(/old money|올드머니|클래식/i.test(outfit.category+' '+outfit.style))keys=['ivory','navy','camel','brown','mint','red','cobalt','emerald','lemon','coral','lavender','burgundy'];
+ if(part.type==='shoes'||part.type==='belt'||part.type==='bag')keys=['black','brown','ivory','mint','red',...keys.filter(k=>!['black','brown','ivory','mint','red'].includes(k))].slice(0,12);
+ if(part.noun==='jeans')keys=['blue','navy','black','gray','ivory','brown','mint','red','cobalt','pink','lemon','purple'];
  return keys;
 }
+
 function partPrompt(prompt,parts,selections){
  let result=prompt;
  for(const p of [...parts].reverse()){
