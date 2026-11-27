@@ -9,7 +9,7 @@ const OUTFITS = [
     "desc": "슬림 셔츠·크롭 가디건·체크 미니·느슨한 타이",
     "keywords": "타이 애프터클래스 가을 프레피 긱시크 프레피 슬림 셔츠·크롭 가디건·체크 미니·느슨한 타이",
     "prompt": "geek chic fashion, nerdy chic, preppy style, fitted white button-up shirt with partially unbuttoned collar and rolled-up sleeves, cropped fitted charcoal cardigan, low rise gray plaid pleated miniskirt, loosely tied burgundy striped necktie, dark gray knee-high socks, black chunky loafers, slim rectangular metal frame glasses, brown leather shoulder bag, vintage wristwatch, muted colors",
-    "image": null
+    "image": "images/women-13.jpg"
   },
   {
     "id": "WW-014",
@@ -21,7 +21,7 @@ const OUTFITS = [
     "desc": "라인스톤 베이비 티·로우라이즈 데님 미니·플랫폼 부츠",
     "keywords": "글리터 버터플라이 여름 스트리트·Y2K 맥블링 Y2K 라인스톤 베이비 티·로우라이즈 데님 미니·플랫폼 부츠",
     "prompt": "mcbling fashion, pale pink rhinestone baby tee, low rise blue denim miniskirt, rhinestone belt, white platform ankle boots, oversized pink tinted sunglasses, large silver hoop earrings, silver charm bracelet, glossy pink handbag, pink butterfly hair clips, glamorous y2k fashion",
-    "image": null
+    "image": "images/women-14.jpg"
   },
   {
     "id": "WW-015",
@@ -33,7 +33,7 @@ const OUTFITS = [
     "desc": "비대칭 볼레로·레이어드 캐미솔·카고 미니·레그워머",
     "keywords": "애시 볼레로 봄 스트리트·Y2K 아쿠비 Y2K 비대칭 볼레로·레이어드 캐미솔·카고 미니·레그워머",
     "prompt": "acubi fashion, charcoal asymmetric cropped bolero with shoulder cutout details, layered gray camisoles, low rise dark gray cargo miniskirt, wide black belt, gray knit leg warmers, chunky gray sneakers, slim black sunglasses, silver chain necklace, neutral colors, gray tones, minimalist y2k fashion",
-    "image": null
+    "image": "images/women-15.jpg"
   },
   {
     "id": "WW-016",
@@ -45,7 +45,7 @@ const OUTFITS = [
     "desc": "낡은 레더 재킷·그래픽 티·데님 미니·찢어진 타이츠",
     "keywords": "미드나이트 개러지 가을 스트리트·Y2K 인디 슬리즈 낡은 레더 재킷·그래픽 티·데님 미니·찢어진 타이츠",
     "prompt": "indie sleaze fashion, worn black leather jacket, oversized faded charcoal graphic t-shirt with abstract non-lettered print and uneven front tuck, faded black denim miniskirt, ripped sheer black tights, scuffed black ankle boots, studded black leather belt, mismatched layered silver necklaces, disheveled clothing, 2000s nightlife fashion",
-    "image": null
+    "image": "images/women-16.jpg"
   },
   {
     "id": "WW-017",
@@ -57,7 +57,7 @@ const OUTFITS = [
     "desc": "화이트 크롭 가디건·핑크 티·로우라이즈 데님·하트 버클",
     "keywords": "핑크 하트브레이크 봄 스트리트·Y2K 핑크 Y2K 화이트 크롭 가디건·핑크 티·로우라이즈 데님·하트 버클",
     "prompt": "white cropped cardigan, pink short sleeve t-shirt, low rise light wash bootcut jeans, black belt with silver heart buckle, pink crossbody purse with chain strap, white platform sneakers, silver hoop earrings, silver necklace with heart pendant, pink headband, pink hair clips, silver bracelets",
-    "image": null
+    "image": "images/women-17.jpg"
   },
   {
     "id": "WW-018",
@@ -69,7 +69,7 @@ const OUTFITS = [
     "desc": "크롭 레더·레이스 캐미솔·비대칭 러플 미니·롱부츠",
     "keywords": "레더 집시 가을 스트리트·Y2K 모토 보헤미안 크롭 레더·레이스 캐미솔·비대칭 러플 미니·롱부츠",
     "prompt": "moto boho fashion, distressed dark brown cropped leather jacket, ivory lace camisole, cream asymmetrical ruffled miniskirt, studded brown leather belt, dark brown slouchy knee-high leather boots, layered silver necklaces, leather bracelets, oversized brown leather shoulder bag, mixed textures, bohemian accessories",
-    "image": null
+    "image": "images/women-18.jpg"
   },
   {
     "id": "WW-019",
@@ -81,7 +81,7 @@ const OUTFITS = [
     "desc": "랩 가디건·캐미솔·쉬폰 미니·리본과 레그워머",
     "keywords": "리본 리허설 봄 캐주얼·미니멀 발레코어 랩 가디건·캐미솔·쉬폰 미니·리본과 레그워머",
     "prompt": "balletcore fashion, blush pink wrap cardigan, ivory fitted camisole, pale pink layered chiffon miniskirt, sheer ivory tights, ivory knit leg warmers, blush pink ballet flats, pink ribbon choker, pearl stud earrings, delicate silver necklace, pink hair ribbon, bow hair clips, soft layered clothing",
-    "image": null
+    "image": "images/women-19.jpg"
   },
   {
     "name": "바시티 위켄드",

@@ -276,7 +276,7 @@ indigo denim trucker jacket, plain white crewneck t-shirt, beige straight-leg ch
 
 charcoal short wool jacket, oatmeal knit crewneck sweater, cream wide-leg corduroy trousers, gray suede low-top sneakers, light gray wool scarf
 
-## 여성복 프롬프트 컬렉션 7종 (이미지 미등록)
+## 여성복 프롬프트 컬렉션 7종
 
 ### WW-013 · 타이 애프터클래스
 
