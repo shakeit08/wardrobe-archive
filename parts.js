@@ -2,15 +2,64 @@
  * piping, buttons, buckles) are intentionally preserved. */
 const PART_COLORS = {
  ivory:['아이보리','#ece5d5','ivory'], black:['블랙','#27272c','black'], charcoal:['차콜','#55555e','charcoal'],
- navy:['네이비','#33415e','navy'], blue:['블루','#7196b6','dusty blue'], brown:['브라운','#795743','chocolate brown'],
+ navy:['네이비','#33415e','navy'], blue:['더스티 블루','#7196b6','dusty blue'], brown:['초콜릿','#795743','chocolate brown'],
  camel:['카멜','#b4926d','camel'], burgundy:['버건디','#773c4d','burgundy'], green:['세이지','#87927a','sage green'],
  olive:['올리브','#62694d','olive'], pink:['더스티 핑크','#c58e9c','dusty pink'], lavender:['라벤더','#aaa0c2','lavender'],
  yellow:['버터 옐로','#deca89','butter yellow'], gray:['그레이','#999ba3','gray'],
  mint:['민트','#7bd9b5','mint green'], red:['레드','#df303d','red'], cobalt:['코발트','#315be3','cobalt blue'],
  coral:['코랄','#f27c70','coral'], turquoise:['터쿼이즈','#28babc','turquoise'], orange:['오렌지','#f28b35','orange'],
  lemon:['레몬 옐로','#f3d94e','lemon yellow'], emerald:['에메랄드','#18946a','emerald green'],
- hotpink:['핫핑크','#e84694','hot pink'], purple:['바이올렛','#8651c3','violet']
+ hotpink:['핫핑크','#e84694','hot pink'], purple:['바이올렛','#8651c3','violet'],
+ // Concept colors
+ white:['화이트','#f7f6f2','white'], cream:['크림','#efe3c8','cream'], oatmeal:['오트밀','#d9ccb4','oatmeal'],
+ sand:['샌드 베이지','#cdb690','sand beige'], taupe:['토프','#9c8b7a','taupe'], lightgray:['라이트 그레이','#c9cacd','light gray'],
+ ash:['애시 그레이','#8a8d92','ash gray'], silver:['실버','#c3c7cc','metallic silver'], champagne:['샴페인','#e3d0a8','champagne'],
+ gold:['골드','#c9a64a','metallic gold'], tan:['탄','#b88a5c','tan'], cognac:['코냑','#9a5630','cognac brown'],
+ espresso:['에스프레소','#3f2b22','dark brown'], rust:['러스트','#a4492b','rust'], terracotta:['테라코타','#c46a4a','terracotta'],
+ mustard:['머스터드','#c99a2e','mustard yellow'], forest:['포레스트 그린','#2f4a37','forest green'], moss:['모스 그린','#6f7a45','moss green'],
+ khaki:['카키','#8c8259','khaki'], pistachio:['피스타치오','#b9cf95','pistachio green'], lime:['라임','#b7dc3c','lime green'],
+ teal:['틸','#1f6f73','teal'], aqua:['아쿠아','#7fd6e3','aqua blue'], babyblue:['베이비 블루','#b9d5ee','baby blue'],
+ skyblue:['스카이 블루','#7fb6e3','sky blue'], slate:['슬레이트 블루','#5b6b82','slate blue'], indigo:['인디고','#2e3a66','indigo'],
+ midnight:['미드나이트','#1e2233','midnight navy'], wine:['와인','#5a1f2d','wine red'], oxblood:['옥스블러드','#4a1820','oxblood'],
+ cherry:['체리 레드','#b3122e','cherry red'], rose:['로즈','#d77a91','rose pink'], babypink:['베이비 핑크','#f4c6d3','baby pink'],
+ peach:['피치','#f6b896','peach'], lilac:['라일락','#c9b3e0','lilac'], plum:['플럼','#5e3553','plum'],
+ lightwash:['라이트 워시','#a3bdd6','light wash blue'], midwash:['미디엄 워시','#5d7fa6','medium wash blue'], darkwash:['다크 워시','#2c3c5a','dark wash indigo']
 };
+/* Concept palettes: ordered from the style's signature tones to its accents. */
+const CONCEPT_PALETTES = {
+ '긱시크 프레피':['forest','wine','mustard','navy','cream','camel','cognac','moss','oatmeal','slate','charcoal','rust','plum','babyblue','teal'],
+ '맥블링 Y2K':['hotpink','babypink','babyblue','lilac','aqua','lime','lemon','white','silver','champagne','gold','purple','coral','turquoise','cherry','black'],
+ '아쿠비 Y2K':['black','charcoal','ash','silver','lightgray','white','midnight','slate','khaki','moss','babyblue','lilac','wine','teal','mint'],
+ '인디 슬리즈':['black','charcoal','oxblood','wine','cherry','midnight','forest','plum','rust','ash','cream','khaki','cognac','silver'],
+ '핑크 Y2K':['babypink','hotpink','rose','white','cherry','lilac','babyblue','lemon','mint','peach','purple','black','silver'],
+ '모토 보헤미안':['cognac','espresso','rust','terracotta','mustard','cream','oatmeal','khaki','moss','wine','tan','sand','teal','black'],
+ '발레코어':['babypink','ivory','white','rose','lilac','peach','champagne','babyblue','yellow','mint','pistachio','lightgray','plum','black'],
+ '아메리칸 캐주얼':['navy','cherry','forest','white','gray','cream','mustard','cobalt','burgundy','khaki','tan','skyblue','orange','black'],
+ '클래식 캐주얼':['navy','sand','khaki','white','olive','camel','forest','babyblue','burgundy','cream','slate','tan','cognac','green'],
+ '클래식 레이어드':['camel','espresso','brown','charcoal','black','cream','oatmeal','olive','wine','navy','taupe','forest','rust'],
+ '빈티지 스트리트':['black','midnight','navy','charcoal','oxblood','forest','mustard','khaki','cream','rust','ash','teal','wine'],
+ '소프트 Y2K':['cream','oatmeal','babypink','babyblue','lilac','white','brown','black','mint','yellow','peach','pistachio','lightgray'],
+ '올드머니':['ivory','cream','navy','camel','sand','oatmeal','forest','burgundy','babyblue','taupe','cognac','espresso','green','champagne','wine'],
+ 'Y2K 스트리트웨어':['cobalt','red','lime','orange','silver','black','white','slate','skyblue','aqua','lemon','purple','ash','navy'],
+ '펑크 프레피':['black','oxblood','cherry','navy','forest','plum','charcoal','wine','white','mustard','purple','cobalt','ash'],
+ '캐주얼':['navy','white','gray','skyblue','khaki','olive','black','cream','mustard','coral','green','slate','orange'],
+ '미니멀':['black','white','ivory','oatmeal','taupe','charcoal','gray','lightgray','green','slate','camel','navy','espresso'],
+ '프레피':['navy','white','cream','babyblue','cherry','forest','burgundy','mint','coral','yellow','khaki','teal','pink'],
+ '클래식':['camel','brown','charcoal','navy','cream','ivory','burgundy','forest','olive','black','taupe','wine','rust'],
+ '스트리트':['black','olive','khaki','gray','charcoal','orange','cobalt','red','white','cream','sand','forest','lime'],
+ '포멀':['black','charcoal','navy','midnight','wine','white','ivory','slate','burgundy','forest','gray','plum'],
+ '클래식 프레피':['navy','burgundy','forest','cream','white','camel','gray','wine','babyblue','black','mustard','plum']
+};
+const CATEGORY_PALETTES = {'캐주얼·미니멀':'캐주얼','클래식·올드머니':'클래식','프레피':'프레피','스트리트·Y2K':'Y2K 스트리트웨어'};
+const SEASON_ACCENTS = {
+ '봄':['babypink','mint','yellow','babyblue','lilac','pistachio','peach'],
+ '여름':['aqua','coral','lemon','skyblue','white','turquoise','lime'],
+ '가을':['rust','mustard','cognac','wine','moss','terracotta'],
+ '겨울':['midnight','oxblood','forest','cream','charcoal','silver']
+};
+const ACCESSORY_NEUTRALS = ['black','espresso','cognac','tan','white','ivory','burgundy','silver'];
+const LEG_NEUTRALS = ['white','black','cream','charcoal','gray','navy'];
+const DENIM_WASHES = ['lightwash','midwash','darkwash','black','ash','white','cream'];
 const PART_TYPES = [
  ['outer','재킷 / 아우터',/\b(?:jacket|blazer|coat|blouson|suit)\b/i],
  ['layer','가디건 / 레이어',/\b(?:cardigan|bolero|(?:sweater )?vest|hoodie)\b/i],
@@ -47,15 +96,22 @@ function garmentParts(prompt){
  return parts;
 }
 function partPalette(part,outfit){
- const vibe=outfit.prompt+' '+outfit.style;
- let keys=['ivory','black','navy','brown','mint','red','cobalt','lemon','emerald','coral','lavender','orange'];
- if(/ballet|발레/i.test(vibe))keys=['ivory','pink','lavender','yellow','mint','red','coral','blue','turquoise','hotpink','purple','black'];
- else if(/mcbling|pink|맥블링/i.test(vibe))keys=['ivory','black','pink','lavender','mint','red','hotpink','cobalt','lemon','coral','turquoise','purple'];
- else if(/acubi|아쿠비|sleaze|슬리즈/i.test(vibe))keys=['black','charcoal','gray','ivory','mint','red','cobalt','emerald','hotpink','purple','orange','turquoise'];
- else if(/old money|올드머니|클래식/i.test(outfit.category+' '+outfit.style))keys=['ivory','navy','camel','brown','mint','red','cobalt','emerald','lemon','coral','lavender','burgundy'];
- if(part.type==='shoes'||part.type==='belt'||part.type==='bag')keys=['black','brown','ivory','mint','red',...keys.filter(k=>!['black','brown','ivory','mint','red'].includes(k))].slice(0,12);
- if(part.noun==='jeans')keys=['blue','navy','black','gray','ivory','brown','mint','red','cobalt','pink','lemon','purple'];
- return keys;
+ const unique=list=>[...new Set(list)].filter(k=>PART_COLORS[k]);
+ const concept=CONCEPT_PALETTES[outfit.style]||CONCEPT_PALETTES[CATEGORY_PALETTES[outfit.category]]||CONCEPT_PALETTES['캐주얼'];
+ const season=SEASON_ACCENTS[outfit.season]||[];
+ // Signature tones stay first; the accent tail rotates per outfit and part for variety.
+ const seed=[...(outfit.id+part.type+part.noun)].reduce((n,c)=>(n*31+c.charCodeAt(0))>>>0,7);
+ const head=concept.slice(0,5),tail=unique([...concept.slice(5),...season]).filter(k=>!head.includes(k));
+ const shift=tail.length?seed%tail.length:0,rotated=[...tail.slice(shift),...tail.slice(0,shift)];
+ let keys=unique([...head,...rotated]);
+ if(/jeans|denim/i.test(part.noun+' '+part.phrase)&&part.type==='bottom')keys=unique([...DENIM_WASHES,...keys]);
+ else if(['shoes','belt','bag'].includes(part.type)){
+  const earthy=concept.some(k=>['brown','camel','cognac','espresso','tan','khaki','sand'].includes(k));
+  const fits=ACCESSORY_NEUTRALS.filter(k=>['black','white'].includes(k)||concept.includes(k)||(earthy&&['espresso','cognac','tan'].includes(k)));
+  keys=unique([...fits.slice(0,5),...keys]);
+ }
+ else if(part.type==='leg')keys=unique([...LEG_NEUTRALS,...keys]);
+ return keys.slice(0,14);
 }
 
 function partPrompt(prompt,parts,selections){
