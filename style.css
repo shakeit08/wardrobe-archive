@@ -6,6 +6,18 @@ body[data-wardrobe="women"]{--ink:#45343f;--accent:#795368;--highlight:#99627e;-
 
 #styles{flex:1;min-width:0}#styles button{min-height:34px}#reset{align-self:flex-start;margin-top:4px}.tags span{overflow-wrap:anywhere}.detailText{min-width:0}#detailImage{object-fit:contain;align-self:center;height:auto}textarea{height:145px}#detail{overscroll-behavior:contain}
 
-body{transition:color .2s}.wardrobeBar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}#wardrobeTabs{display:flex;padding:5px;border:1px solid #d9d8d2;border-radius:10px;background:#efeee9;gap:5px}#wardrobeTabs button{display:flex;align-items:center;gap:15px;min-height:46px;padding:12px 27px;border:0;border-radius:6px;background:transparent;color:#6c6b66;font-weight:600;font-size:14px;transition:background .2s,color .2s}#wardrobeTabs button[aria-selected="true"]{background:var(--accent);color:#fff;box-shadow:0 2px 5px #0001}#wardrobeTabs span{font-size:10px;opacity:.75;font-weight:400}#wardrobeLabel{font-size:10px;letter-spacing:1.5px;color:var(--muted)}.quiet{color:var(--ink)}#styles button.active{color:var(--accent)}.secondary{color:var(--accent)}#empty button{color:var(--accent);border-color:var(--accent)}body[data-wardrobe="women"] textarea{background:var(--soft);color:var(--ink)}
-@media(max-width:600px){.wardrobeBar{display:block;margin-bottom:18px}#wardrobeTabs{width:100%}#wardrobeTabs button{flex:1;justify-content:center;padding:12px 15px}#wardrobeLabel{margin:12px 0 0;font-size:9px}.wordmark{letter-spacing:.8px}header{gap:12px}h1{font-size:40px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+body{transition:color .3s}
+.wardrobeBar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
+#wardrobeTabs{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr 1fr;width:324px;padding:5px;border:1px solid #deddd6;border-radius:999px;background:#eeede7;box-shadow:inset 0 2px 5px #26332c08}
+#wardrobeTabs::before{content:"";position:absolute;z-index:0;pointer-events:none;left:5px;top:5px;bottom:5px;width:calc((100% - 10px)/2);border-radius:999px;background:var(--accent);box-shadow:0 3px 9px #26332c24,inset 0 1px 0 #ffffff20;transform:translateX(0);transition:transform .38s cubic-bezier(.22,1,.36,1),background .3s}
+body[data-wardrobe="women"] #wardrobeTabs::before{transform:translateX(100%)}
+#wardrobeTabs button{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:10px;min-width:0;min-height:50px;padding:12px 22px;border:0;border-radius:999px;background:transparent;color:#6c6b66;font-weight:600;font-size:14px;letter-spacing:.1px;transition:color .22s;-webkit-tap-highlight-color:transparent}
+#wardrobeTabs button[aria-selected="true"]{color:#fff}
+#wardrobeTabs button:focus-visible{outline-offset:2px}
+#wardrobeTabs button span{display:grid;place-items:center;min-width:26px;height:22px;padding:0 6px;border-radius:20px;background:#26332c09;color:inherit;font-size:10px;font-weight:500;transition:background .25s}
+#wardrobeTabs button[aria-selected="true"] span{background:#ffffff26}
+#wardrobeLabel{font-size:10px;letter-spacing:1.5px;color:var(--muted)}
+.quiet{color:var(--ink)}#styles button.active{color:var(--accent)}.secondary{color:var(--accent)}#empty button{color:var(--accent);border-color:var(--accent)}body[data-wardrobe="women"] textarea{background:var(--soft);color:var(--ink)}
+@media(max-width:600px){.wardrobeBar{display:block;margin-bottom:18px}#wardrobeTabs{width:100%;max-width:360px}#wardrobeTabs button{padding:12px 15px}#wardrobeLabel{margin:12px 0 0;font-size:9px}.wordmark{letter-spacing:.8px}header{gap:12px}h1{font-size:40px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
