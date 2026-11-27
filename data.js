@@ -1,5 +1,27 @@
 const OUTFITS = [
   {
+    "name": "브라운 인터루드",
+    "season": "가을",
+    "category": "클래식·올드머니",
+    "style": "클래식 레이어드",
+    "desc": "오픈 트렌치·화이트 셔츠와 블랙 터틀넥·코듀로이 팬츠",
+    "keywords": "트렌치 브라운 갈색 코트 풀어진 벨트 셔츠 터틀넥 코듀로이 첼시 부츠",
+    "prompt": "open brown trench coat with untied hanging coat belt, loose white collared shirt partially unbuttoned over a black turtleneck, layered clothes, brown straight-leg corduroy pants, dark brown leather belt, black leather chelsea ankle boots, brown wool scarf, simple wristwatch with dark brown leather strap, brown framed glasses, dark brown leather wallet",
+    "id": "MW-036",
+    "image": "images/look-36.jpg"
+  },
+  {
+    "name": "네이비 몽마르트르",
+    "season": "겨울",
+    "category": "스트리트·Y2K",
+    "style": "빈티지 스트리트",
+    "desc": "블랙 베레모·레더 재킷·타탄 머플러·체크 울 버뮤다",
+    "keywords": "베레모 울 가죽 재킷 타탄 체크 네이비 머플러 버뮤다 반바지 롱삭스 첼시 부츠",
+    "prompt": "structured black wool felt beret, black leather jacket, oversized bulky dark navy tartan wool scarf in muted colors, black turtleneck, navy plaid wool tweed bermuda shorts, slouchy dark gray over-the-knee socks with wrinkles, black leather chelsea ankle boots",
+    "id": "MW-037",
+    "image": "images/look-37.jpg"
+  },
+  {
     "id": "MW-035",
     "name": "테디 스노우",
     "season": "겨울",

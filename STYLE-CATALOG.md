@@ -131,3 +131,21 @@ olive waxed cotton field jacket with dark brown corduroy collar, burgundy fine-k
 오버핏 니트 베스트·벌룬 쇼츠·폼폼 레그워머·곰돌이 백팩
 
 oversized black knit sweater vest, white long-sleeve polo shirt, layered sleeves, brown knee-length balloon shorts with subtle gathered hems, dark charcoal tights, slouchy white knit leg warmers with pom-poms, chunky cream sneakers, black earmuffs, teddy bear backpack
+
+## 트렌치 & 베레모 — 남성 코디 2종
+
+### MW-036 · 브라운 인터루드
+
+클래식·올드머니 / 가을
+
+오픈 트렌치·화이트 셔츠와 블랙 터틀넥·코듀로이 팬츠
+
+open brown trench coat with untied hanging coat belt, loose white collared shirt partially unbuttoned over a black turtleneck, layered clothes, brown straight-leg corduroy pants, dark brown leather belt, black leather chelsea ankle boots, brown wool scarf, simple wristwatch with dark brown leather strap, brown framed glasses, dark brown leather wallet
+
+### MW-037 · 네이비 몽마르트르
+
+스트리트·Y2K / 겨울
+
+블랙 베레모·레더 재킷·타탄 머플러·체크 울 버뮤다
+
+structured black wool felt beret, black leather jacket, oversized bulky dark navy tartan wool scarf in muted colors, black turtleneck, navy plaid wool tweed bermuda shorts, slouchy dark gray over-the-knee socks with wrinkles, black leather chelsea ankle boots
