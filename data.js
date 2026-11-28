@@ -1,5 +1,41 @@
 const OUTFITS = [
 {
+  "id": "WW-030",
+  "wardrobe": "women",
+  "name": "블랙 리틀 프린스",
+  "season": "봄",
+  "category": "프레피",
+  "style": "모던 오우지",
+  "desc": "블랙 포인티드 베스트·스탠드칼라 블라우스·버뮤다 팬츠",
+  "prompt": "modern ouji fashion, black tailored waist-length vest with pointed front hem and small covered buttons, ivory cotton blouse with low stand collar and tiny gathered cuffs and relaxed long sleeves, black high-waisted pleated knee-length bermuda shorts, black knee-high socks, black leather lace-up derby shoes, black compact leather satchel",
+  "image": "images/women-30.jpg",
+  "keywords": "블랙 리틀 프린스 봄 프레피 모던 오우지 블랙 포인티드 베스트·스탠드칼라 블라우스·버뮤다 팬츠 오우지 롤리타 로리타 왕자 ouji lolita 모던 클래식 젠더리스 여성복"
+},
+{
+  "id": "WW-031",
+  "wardrobe": "women",
+  "name": "네이비 살롱",
+  "season": "가을",
+  "category": "프레피",
+  "style": "모던 오우지",
+  "desc": "네이비 크롭 더블 재킷·스카이블루 핀턱 블라우스·차콜 슬랙스",
+  "prompt": "modern ouji fashion, navy cropped double-breasted jacket with small antique silver buttons and a clean straight cut, sky blue high-neck blouse with narrow vertical pintucks and a tiny ruffled collar and long sleeves, charcoal high-waisted pleated tapered ankle-length trousers, black leather loafers with small silver buckles, black structured leather shoulder bag, black ribbed crew socks",
+  "image": "images/women-31.jpg",
+  "keywords": "네이비 살롱 가을 프레피 모던 오우지 네이비 크롭 더블 재킷·스카이블루 핀턱 블라우스·차콜 슬랙스 오우지 롤리타 로리타 왕자 ouji lolita 모던 클래식 젠더리스 여성복"
+},
+{
+  "id": "WW-032",
+  "wardrobe": "women",
+  "name": "플럼 포엣",
+  "season": "가을",
+  "category": "프레피",
+  "style": "모던 오우지",
+  "desc": "플럼 베스트·옆 리본 블라우스·차콜 와이드 퀼로트",
+  "prompt": "modern ouji fashion, plum tailored vest with subtle pointed front hem and tonal buttons, cream long-sleeve blouse with small same-fabric bow offset to one side of the neckline and gently gathered sleeves, charcoal high-waisted pleated wide-leg cropped pants ending below the knee, dark brown leather lace-up ankle boots with low block heels, dark brown compact leather shoulder bag",
+  "image": "images/women-32.jpg",
+  "keywords": "플럼 포엣 가을 프레피 모던 오우지 플럼 베스트·옆 리본 블라우스·차콜 와이드 퀼로트 오우지 롤리타 로리타 왕자 ouji lolita 모던 클래식 젠더리스 여성복"
+},
+{
   "id": "WW-026",
   "wardrobe": "women",
   "name": "로즈 티타임",
