@@ -8,8 +8,8 @@ const OUTFITS = [
   "style": "페미닌",
   "desc": "로즈 타이 블라우스·아이보리 미디·메리제인",
   "keywords": "로즈 티타임 봄 클래식·올드머니 페미닌 로즈 타이 블라우스·아이보리 미디·메리제인 데일리 여성복 페미닌 블라우스 스커트",
-  "prompt": "dusty pink long-sleeve crepe blouse with small softly tied neck bow and relaxed sleeves, ivory gently flared midi skirt, burgundy leather mary jane shoes with low block heels, burgundy compact leather shoulder bag",
-  "image": "images/women-26.jpg"
+  "prompt": "dusty pink long-sleeve crepe blouse with small softly tied bow offset to one side of the neckline and relaxed sleeves, ivory gently flared midi skirt, burgundy leather mary jane shoes with low block heels, burgundy compact leather shoulder bag",
+  "image": "images/women-26-sidebow.jpg"
 },
 {
   "id": "WW-027",

@@ -82,7 +82,7 @@ const PartEditor = (()=>{
   if(!next.image)return;
   const img=new Image();
   const imageReady=new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;});img.src=next.image;
-  Promise.all([imageReady,loadLabels('images/masks/'+next.id+'.png')]).then(([,lab])=>{
+  Promise.all([imageReady,loadLabels('images/masks/'+next.id+'.png?v=20261128-sidebow')]).then(([,lab])=>{
    if(token!==revision)return;sourceImage=img;w=Math.min(512,img.naturalWidth);h=Math.round(img.naturalHeight*w/img.naturalWidth);canvas.width=w;canvas.height=h;ctx.drawImage(img,0,0,w,h);
    try{original=ctx.getImageData(0,0,w,h);}catch{fail();return;}
    if(lab){labels=lab.l;LW=lab.W;LH=lab.H;parts.forEach((p,i)=>{const m=partAlpha(i,w,h);if(m)masks[p.id]=m;});}
