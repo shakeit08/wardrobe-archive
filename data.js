@@ -1,4 +1,52 @@
 const OUTFITS = [
+{
+  "id": "WW-026",
+  "wardrobe": "women",
+  "name": "로즈 티타임",
+  "season": "봄",
+  "category": "클래식·올드머니",
+  "style": "페미닌",
+  "desc": "로즈 타이 블라우스·아이보리 미디·메리제인",
+  "keywords": "로즈 티타임 봄 클래식·올드머니 페미닌 로즈 타이 블라우스·아이보리 미디·메리제인 데일리 여성복 페미닌 블라우스 스커트",
+  "prompt": "dusty pink long-sleeve crepe blouse with small softly tied neck bow and relaxed sleeves, ivory gently flared midi skirt, burgundy leather mary jane shoes with low block heels, burgundy compact leather shoulder bag",
+  "image": "images/women-26.jpg"
+},
+{
+  "id": "WW-027",
+  "wardrobe": "women",
+  "name": "블루 선데이",
+  "season": "여름",
+  "category": "캐주얼·미니멀",
+  "style": "페미닌",
+  "desc": "스카이블루 스퀘어넥 원피스·크림 가디건·플랫 샌들",
+  "keywords": "블루 선데이 여름 캐주얼·미니멀 페미닌 스카이블루 스퀘어넥 원피스·크림 가디건·플랫 샌들 데일리 여성복 페미닌 원피스",
+  "prompt": "sky blue cotton midi dress with modest square neckline and wide shoulder straps and a gently gathered natural waist, cream lightweight waist-length cardigan, tan leather flat sandals, tan small woven shoulder bag",
+  "image": "images/women-27.jpg"
+},
+{
+  "id": "WW-028",
+  "wardrobe": "women",
+  "name": "네이비 도트 데이트",
+  "season": "봄",
+  "category": "클래식·올드머니",
+  "style": "페미닌",
+  "desc": "잔도트 미디 원피스·메리제인·레드 숄더백",
+  "keywords": "네이비 도트 데이트 봄 클래식·올드머니 페미닌 잔도트 미디 원피스·메리제인·레드 숄더백 데일리 여성복 페미닌 원피스",
+  "prompt": "navy matte crepe midi dress with tiny evenly spaced ivory polka dots and a modest round neckline and short sleeves and a gently flared skirt, black leather mary jane shoes with low block heels, cherry red small leather shoulder bag",
+  "image": "images/women-28.jpg"
+},
+{
+  "id": "WW-029",
+  "wardrobe": "women",
+  "name": "플럼 애프터눈",
+  "season": "가을",
+  "category": "클래식·올드머니",
+  "style": "페미닌",
+  "desc": "플럼 롱슬리브 원피스·다크 브라운 부츠·크림 숄더백",
+  "keywords": "플럼 애프터눈 가을 클래식·올드머니 페미닌 플럼 롱슬리브 원피스·다크 브라운 부츠·크림 숄더백 데일리 여성복 페미닌 원피스",
+  "prompt": "plum long-sleeve matte crepe midi dress with modest boat neckline and a relaxed straight bodice and a softly flared skirt with subtle waist seams, dark brown leather ankle boots with low block heels, cream structured leather shoulder bag",
+  "image": "images/women-29.jpg"
+},
   {
     "id": "WW-020",
     "wardrobe": "women",
