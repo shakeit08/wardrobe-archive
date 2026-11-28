@@ -27,6 +27,7 @@ const PART_COLORS = {
 };
 /* Concept palettes: ordered from the style's signature tones to its accents. */
 const CONCEPT_PALETTES = {
+ '오우지 롤리타':['black','navy','wine','ivory','forest','plum','cobalt','cherry','mint','lilac','slate','cream','espresso','silver'],
  '모던 오우지':['black','ivory','plum','navy','wine','forest','slate','mint','lilac','cherry','skyblue','charcoal','cognac','cream'],
  '페미닌':['rose','ivory','navy','plum','mint','skyblue','cherry','lilac','cream','wine','peach','pistachio','cobalt','babypink'],
  '긱시크 프레피':['forest','wine','mustard','navy','cream','camel','cognac','moss','oatmeal','slate','charcoal','rust','plum','babyblue','teal'],

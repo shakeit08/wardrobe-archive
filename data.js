@@ -1,5 +1,41 @@
 const OUTFITS = [
 {
+  "id": "MW-041",
+  "wardrobe": "men",
+  "name": "블랙 노크턴",
+  "season": "가을",
+  "category": "프레피",
+  "style": "오우지 롤리타",
+  "desc": "체인 베스트·자보 셔츠·버뮤다 팬츠·레이스업 부츠",
+  "prompt": "ouji fashion, black tailored vest with pointed front hem and ornate antique silver buttons and a short draped silver pocket chain, ivory long-sleeve stand-collar shirt with layered lace jabot attached at the neckline and narrow ruffled cuffs, black high-waisted pleated knee-length bermuda shorts with small side buckle tabs, black ribbed knee-high socks, black leather lace-up ankle boots with low block heels",
+  "image": "images/men-ouji-41.jpg",
+  "keywords": "블랙 노크턴 가을 프레피 오우지 롤리타 체인 베스트·자보 셔츠·버뮤다 팬츠·레이스업 부츠 남성복 오우지 롤리타 로리타 왕자 고딕 클래식 ouji lolita prince"
+},
+{
+  "id": "MW-042",
+  "wardrobe": "men",
+  "name": "버건디 벨벳 살롱",
+  "season": "겨울",
+  "category": "프레피",
+  "style": "오우지 롤리타",
+  "desc": "버건디 벨벳 재킷·리본 타이 셔츠·차콜 슬랙스",
+  "prompt": "ouji fashion, burgundy velvet waist-length jacket with black velvet lapels and ornate antique gold buttons and subtle braided trim at cuffs, cream long-sleeve shirt with narrow pleated front and a modest same-fabric ribbon bow at the collar and ruffled cuffs, charcoal high-waisted pleated straight-leg trousers, black leather loafers with ornate antique gold buckles, black ribbed crew socks",
+  "image": "images/men-ouji-42.jpg",
+  "keywords": "버건디 벨벳 살롱 겨울 프레피 오우지 롤리타 버건디 벨벳 재킷·리본 타이 셔츠·차콜 슬랙스 남성복 오우지 롤리타 로리타 왕자 고딕 클래식 ouji lolita prince"
+},
+{
+  "id": "MW-043",
+  "wardrobe": "men",
+  "name": "네이비 프린스",
+  "season": "봄",
+  "category": "프레피",
+  "style": "오우지 롤리타",
+  "desc": "네이비 더블 베스트·프릴 셔츠·버튼 커프 팬츠",
+  "prompt": "ouji fashion, navy double-breasted tailored vest with antique silver buttons and slim silver braid edging and a short draped silver pocket chain, white long-sleeve high-collar shirt with small layered lace jabot with silver brooch and narrow ruffled front placket and gently gathered sleeves and small ruffled cuffs, navy high-waisted knee-length pleated shorts with fitted buttoned cuffs and three small silver buttons on each cuff, ivory knee-high socks, black leather lace-up derby shoes",
+  "image": "images/men-ouji-43.jpg",
+  "keywords": "네이비 프린스 봄 프레피 오우지 롤리타 네이비 더블 베스트·프릴 셔츠·버튼 커프 팬츠 남성복 오우지 롤리타 로리타 왕자 고딕 클래식 ouji lolita prince"
+},
+{
   "id": "WW-030",
   "wardrobe": "women",
   "name": "블랙 리틀 프린스",
