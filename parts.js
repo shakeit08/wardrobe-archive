@@ -27,6 +27,9 @@ const PART_COLORS = {
 };
 /* Concept palettes: ordered from the style's signature tones to its accents. */
 const CONCEPT_PALETTES = {
+ '빈티지 프레피':['brown','navy','ivory','wine','forest','mint','cherry','slate','plum','cognac','skyblue','rust','cream','lilac'],
+ '소프트 프레피':['skyblue','navy','cream','mint','babypink','lilac','cherry','cobalt','plum','white','pistachio','gray','wine'],
+ '빈티지 로맨틱':['burgundy','cream','forest','brown','navy','rose','mint','plum','lilac','cognac','cherry','ivory','slate'],
  '페미닌':['rose','ivory','navy','plum','mint','skyblue','cherry','lilac','cream','wine','peach','pistachio','cobalt','babypink'],
  '긱시크 프레피':['forest','wine','mustard','navy','cream','camel','cognac','moss','oatmeal','slate','charcoal','rust','plum','babyblue','teal'],
  '맥블링 Y2K':['hotpink','babypink','babyblue','lilac','aqua','lime','lemon','white','silver','champagne','gold','purple','coral','turquoise','cherry','black'],
@@ -63,7 +66,7 @@ const LEG_NEUTRALS = ['white','black','cream','charcoal','gray','navy'];
 const DENIM_WASHES = ['lightwash','midwash','darkwash','black','ash','white','cream'];
 const PART_TYPES = [
  ['dress','원피스',/\b(?:dress(?!\s+shoes\b)|sundress)\b/i],
- ['outer','재킷 / 아우터',/\b(?:jacket|blazer|coat|blouson|suit)\b/i],
+ ['outer','재킷 / 아우터',/\b(?:jacket|blazer|coat|blouson|suit|cape)\b/i],
  ['layer','가디건 / 레이어',/\b(?:cardigan|bolero|(?:sweater )?vest|hoodie)\b/i],
  ['top','상의',/\b(?:t-shirt|tee|shirt|blouse|camisoles?|tank top|turtleneck|sweater|sweatshirt|jersey|polo|undershirt|(?<![-\w])top)\b/i],
  ['bottom','하의',/\b(?:miniskirt|skirt|shorts|pants|trousers|jeans|chinos)\b/i],
@@ -92,7 +95,7 @@ function garmentParts(prompt){
   }
  }
  // Distinguish repeated layers (outer shirt / undershirt, tights / leg warmers).
- const names={'dress':'원피스','sundress':'원피스','jacket':'재킷','blazer':'블레이저','coat':'코트','cardigan':'가디건','bolero':'볼레로','hoodie':'후디','vest':'베스트','sweater vest':'니트 베스트','t-shirt':'티셔츠','tee':'티셔츠','shirt':'셔츠','blouse':'블라우스','camisole':'캐미솔','camisoles':'캐미솔','tank top':'탱크톱','turtleneck':'터틀넥','sweater':'니트','polo':'폴로','undershirt':'이너','miniskirt':'미니스커트','skirt':'스커트','shorts':'반바지','pants':'팬츠','trousers':'슬랙스','jeans':'데님','chinos':'치노','socks':'양말','tights':'타이츠','leg warmers':'레그워머','belt':'벨트','scarf':'목도리','necktie':'넥타이','tie':'타이','headband':'헤어밴드','hair clips':'헤어핀','hair ribbon':'헤어리본'};
+ const names={'cape':'케이프','dress':'원피스','sundress':'원피스','jacket':'재킷','blazer':'블레이저','coat':'코트','cardigan':'가디건','bolero':'볼레로','hoodie':'후디','vest':'베스트','sweater vest':'니트 베스트','t-shirt':'티셔츠','tee':'티셔츠','shirt':'셔츠','blouse':'블라우스','camisole':'캐미솔','camisoles':'캐미솔','tank top':'탱크톱','turtleneck':'터틀넥','sweater':'니트','polo':'폴로','undershirt':'이너','miniskirt':'미니스커트','skirt':'스커트','shorts':'반바지','pants':'팬츠','trousers':'슬랙스','jeans':'데님','chinos':'치노','socks':'양말','tights':'타이츠','leg warmers':'레그워머','belt':'벨트','scarf':'목도리','necktie':'넥타이','tie':'타이','headband':'헤어밴드','hair clips':'헤어핀','hair ribbon':'헤어리본'};
  const counts={};
  for(const p of parts){p.label=names[p.noun.toLowerCase()]||p.label;counts[p.label]=(counts[p.label]||0)+1;if(counts[p.label]>1)p.label+=' '+counts[p.label];}
  return parts;
