@@ -1,5 +1,65 @@
 const OUTFITS = [
   {
+    "id": "WW-020",
+    "wardrobe": "women",
+    "name": "민트 모닝",
+    "season": "봄",
+    "category": "캐주얼·미니멀",
+    "style": "클래식 캐주얼",
+    "desc": "민트 셔츠·에크루 스트레이트 데님·브라운 로퍼",
+    "keywords": "민트 모닝 봄 캐주얼·미니멀 클래식 캐주얼 민트 셔츠·에크루 스트레이트 데님·브라운 로퍼 데일리 여성복",
+    "prompt": "relaxed mint green cotton button-up shirt with rolled sleeves, ivory straight-leg jeans, dark brown leather penny loafers, chocolate brown small leather shoulder bag",
+    "image": "images/women-20.jpg"
+  },
+  {
+    "id": "WW-021",
+    "wardrobe": "women",
+    "name": "레드 북클럽",
+    "season": "봄",
+    "category": "프레피",
+    "style": "클래식 프레피",
+    "desc": "레드 크루넥 가디건·네이비 미디·메리제인",
+    "keywords": "레드 북클럽 봄 프레피 클래식 프레피 레드 크루넥 가디건·네이비 미디·메리제인 데일리 여성복",
+    "prompt": "red fine-knit crewneck cardigan fully buttoned with a straight relaxed hem, navy A-line cotton midi skirt, black leather mary jane shoes with low block heels, ivory crew socks, black compact leather shoulder bag",
+    "image": "images/women-21.jpg"
+  },
+  {
+    "id": "WW-023",
+    "wardrobe": "women",
+    "name": "코발트 위켄드",
+    "season": "가을",
+    "category": "스트리트·Y2K",
+    "style": "Y2K 스트리트웨어",
+    "desc": "코발트 트랙 재킷·화이트 티·차콜 나일론 미디",
+    "keywords": "코발트 위켄드 가을 스트리트·Y2K Y2K 스트리트웨어 코발트 트랙 재킷·화이트 티·차콜 나일론 미디 데일리 여성복",
+    "prompt": "cobalt blue lightweight zip-up track jacket with a stand collar and narrow ivory sleeve stripes, plain white crewneck t-shirt, charcoal nylon straight midi skirt with a small back walking slit, silver gray low-profile running sneakers, black compact nylon shoulder bag",
+    "image": "images/women-23.jpg"
+  },
+  {
+    "id": "WW-024",
+    "wardrobe": "women",
+    "name": "스웨이드 에스프레소",
+    "season": "가을",
+    "category": "캐주얼·미니멀",
+    "style": "클래식 캐주얼",
+    "desc": "브라운 스웨이드·크림 니트·다크 데님",
+    "keywords": "스웨이드 에스프레소 가을 캐주얼·미니멀 클래식 캐주얼 브라운 스웨이드·크림 니트·다크 데님 데일리 여성복",
+    "prompt": "chocolate brown suede zip-front jacket with a pointed collar and waist-length boxy cut, cream fine-knit crewneck sweater, dark indigo straight-leg jeans, dark brown leather ankle boots with low block heels, cognac brown structured leather shoulder bag",
+    "image": "images/women-24.jpg"
+  },
+  {
+    "id": "WW-025",
+    "wardrobe": "women",
+    "name": "네이비 윈터워크",
+    "season": "겨울",
+    "category": "클래식·올드머니",
+    "style": "클래식",
+    "desc": "네이비 더플·그레이 니트·크림 울 팬츠",
+    "keywords": "네이비 윈터워크 겨울 클래식·올드머니 클래식 네이비 더플·그레이 니트·크림 울 팬츠 데일리 여성복",
+    "prompt": "navy thigh-length wool duffle coat with dark horn toggles and a hood, light gray ribbed crewneck sweater, cream straight-leg wool trousers, black leather chelsea ankle boots, burgundy wool scarf, dark brown leather tote bag",
+    "image": "images/women-25.jpg"
+  },
+  {
     "id": "WW-013",
     "wardrobe": "women",
     "name": "타이 애프터클래스",
